@@ -1,0 +1,27 @@
+---
+interface Props {
+  icon?: boolean
+  color?:
+    | 'chip-default'
+    | 'chip-primary'
+    | 'chip-secondary'
+    | 'chip-danger'
+    | 'chip-success'
+    | 'chip-warning'
+    | 'chip-info'
+  label: string
+}
+
+const { color = 'chip-default', icon, label } = Astro.props
+---
+
+<div class={`flex items-center gap-1.5 chip ${color}`}>
+  {
+    icon && (
+      <div class="-ml-1.5">
+        <slot />
+      </div>
+    )
+  }
+  <span>{label}</span>
+</div>

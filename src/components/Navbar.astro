@@ -1,0 +1,34 @@
+---
+import Button from './Button.astro'
+
+import navbar from '../data/navbar.json'
+
+const pathname = Astro.url.pathname
+---
+
+<nav class="card">
+  <ul class="flex items-center gap-2">
+    {
+      navbar.map((item) => (
+        <li>
+          <a href={item.href} class="btn">
+            {item.text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script>
+  const url = window.location.pathname
+  const navLinks = document.querySelectorAll('a.btn')
+
+  navLinks.forEach((link) => {
+    if (link.getAttribute('href') === url) {
+      link.classList.add('btn-primary')
+    } else {
+      link.classList.add('btn-secondary')
+    }
+  })
+</script>

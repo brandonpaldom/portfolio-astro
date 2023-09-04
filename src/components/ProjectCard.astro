@@ -1,0 +1,30 @@
+---
+interface Props {
+  project: {
+    slug: string
+    coverImage: string
+    name: string
+  }
+}
+
+const { project } = Astro.props
+---
+
+<li
+  class="rounded-lg bg-neutral-800 hover:bg-neutral-700 transition-colors duration-300"
+>
+  <a href={`/projects/${project.slug}`} class="">
+    <figure>
+      <img
+        src={project.coverImage}
+        alt=""
+        width="800"
+        height="600"
+        class="rounded-t-lg"
+      />
+    </figure>
+    <div class="px-4 py-3 rounded-b-lg">
+      <p class="font-semibold">{project.name}</p>
+    </div>
+  </a>
+</li>
