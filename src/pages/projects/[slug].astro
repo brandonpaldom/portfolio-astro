@@ -44,20 +44,24 @@ const { project } = Astro.props
   <div class="mt-4">
     <p>{project.description}</p>
   </div>
-  {
-    project.url || project.github ? (
-      <div class="flex gap-2 flex-wrap mt-4">
+  <div class="flex gap-2 flex-wrap mt-4">
+    {
+      project.url && (
         <Button icon href={project.url} color="btn-white">
           <PublicIcon slot="icon" />
-          Ir al sitio web
+          Ver proyecto
         </Button>
+      )
+    }
+    {
+      project.github && (
         <Button icon href={project.github} color="btn-secondary">
           <GitHubIcon slot="icon" />
-          Ver repositorio
+          Ver código
         </Button>
-      </div>
-    ) : null
-  }
+      )
+    }
+  </div>
   {
     project.images && (
       <div

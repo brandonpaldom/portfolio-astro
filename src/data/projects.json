@@ -1,25 +1,5 @@
 [
   {
-    "id": "EcVUn8F72qcvxSwaVELM",
-    "slug": "barber-vue-appointments",
-    "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-2.jpg",
-    "name": "BarberVue Appointments",
-    "tags": ["Vue.js", "Tailwind CSS", "MongoDB", "Express", "Node.js"],
-    "description": "Barber Vue es una aplicación web para agendar citas en una barbería. Fue desarrollada con Vue.js, Tailwind CSS, MongoDB, Express y Node.js. Accede a la plataforma con las siguientes credenciales: email <client@mail.com>, password <password>. Y comienza a agendar tus citas.",
-    "client": "Barber Vue",
-    "url": "https://dazzling-travesseiro-ab7e24.netlify.app/",
-    "github": "https://github.com/brandonpaldom/barber-vue-frontend",
-    "images": [
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-1.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-2.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-3.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021185/portfolio/projects/barber-vue-4.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-5.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-6.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-7.jpg"
-    ]
-  },
-  {
     "id": "jXUDBG92xjBgbEm8NHn2",
     "slug": "teslo-shop",
     "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/teslo-shop-1.jpg",
@@ -34,8 +14,7 @@
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/teslo-shop-2.jpg",
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/teslo-shop-3.jpg",
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916573/portfolio/projects/teslo-shop-4.jpg"
-    ],
-    "development": true
+    ]
   },
   {
     "id": "73TDrCBePvuSeyQVHt9v",
@@ -69,6 +48,26 @@
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-3.jpg",
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-4.jpg",
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-5.jpg"
+    ]
+  },
+  {
+    "id": "EcVUn8F72qcvxSwaVELM",
+    "slug": "barber-vue-appointments",
+    "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-2.jpg",
+    "name": "BarberVue Appointments",
+    "tags": ["Vue.js", "Tailwind CSS", "MongoDB", "Express", "Node.js"],
+    "description": "Barber Vue es una aplicación web para agendar citas en una barbería. Fue desarrollada con Vue.js, Tailwind CSS, MongoDB, Express y Node.js. Accede a la plataforma con las siguientes credenciales: email <client@mail.com>, password <password>. Y comienza a agendar tus citas.",
+    "client": "Barber Vue",
+    "url": "https://dazzling-travesseiro-ab7e24.netlify.app/",
+    "github": "https://github.com/brandonpaldom/barber-vue-frontend",
+    "images": [
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-1.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-2.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-3.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021185/portfolio/projects/barber-vue-4.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-5.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-6.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-7.jpg"
     ]
   },
   {
@@ -154,8 +153,6 @@
     "tags": ["Photoshop", "Illustrator", "InDesign", "WordPress"],
     "description": "\"Sayab Juriquilla\" es un proyecto de desarrollo inmobiliario que incluye branding, diseño y sitio web para un nuevo conjunto de terrenos en Querétaro, México. El proyecto destaca las características y beneficios de la ubicación, facilitando a los posibles compradores conocer más y tomar una decisión de compra informada.",
     "client": "Sayab Juriquilla",
-    "url": "",
-    "offline": true,
     "images": [
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/sayab-juriquilla-1.jpg",
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916574/portfolio/projects/sayab-juriquilla-2.jpg",
