@@ -10,7 +10,7 @@ import Footer from '../components/Footer.astro'
 
 interface Props {
   title: string
-  description?: string
+  description: string
 }
 
 const { title, description } = Astro.props
@@ -24,20 +24,18 @@ const { title, description } = Astro.props
     <meta name="description" content={description} />
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dlomynswh/image/upload/v1678916234/portfolio/og-image.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script>
-      window.va =
-        window.va ||
-        function () {
-          ;(window.vaq = window.vaq || []).push(arguments)
-        }
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body>
     <Cover />

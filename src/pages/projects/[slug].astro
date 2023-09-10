@@ -19,7 +19,10 @@ export async function getStaticPaths() {
 const { project } = Astro.props
 ---
 
-<Layout title={project.name}>
+<Layout
+  title={project.name}
+  description="Aquí encontrarás una selección de mis proyectos más destacados y una descripción de mi experiencia en el campo de la tecnología y el diseño web."
+>
   <h1>{project.name}</h1>
   {
     project.development && (
