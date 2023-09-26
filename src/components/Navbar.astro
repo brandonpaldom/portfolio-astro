@@ -1,6 +1,4 @@
 ---
-import Button from './Button.astro'
-
 import navbar from '../data/navbar.json'
 
 const pathname = Astro.url.pathname
@@ -11,7 +9,7 @@ const pathname = Astro.url.pathname
     {
       navbar.map((item) => (
         <li>
-          <a href={item.href} class="btn">
+          <a href={item.href} class="btn" id="nav-link">
             {item.text}
           </a>
         </li>
@@ -22,7 +20,7 @@ const pathname = Astro.url.pathname
 
 <script>
   const url = window.location.pathname
-  const navLinks = document.querySelectorAll('a.btn')
+  const navLinks = document.querySelectorAll('#nav-link')
 
   navLinks.forEach((link) => {
     if (link.getAttribute('href') === url) {
