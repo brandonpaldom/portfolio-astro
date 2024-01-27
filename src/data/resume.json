@@ -46,7 +46,13 @@
   "certifications": [
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/coderhouse-logo.png",
-      "title": "React Js",
+      "title": "Curso de Next.js",
+      "organization": "Coderhouse",
+      "date": "dic 2023"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/coderhouse-logo.png",
+      "title": "Curso de React",
       "organization": "Coderhouse",
       "date": "jun 2022"
     },
