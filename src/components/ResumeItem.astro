@@ -1,0 +1,36 @@
+---
+interface Props {
+  item: {
+    image: string
+    title: string
+    organization: string
+    date: string
+    summary?: string
+  }
+}
+
+const { item } = Astro.props
+---
+
+<section class="flex flex-col gap-2">
+  <div class="flex items-start gap-4">
+    {
+      item.image ? (
+        <img
+          src={item.image}
+          alt=""
+          width="48"
+          height="48"
+          class="rounded-lg"
+        />
+      ) : (
+        <div class="bg-neutral-800 w-12 h-12 rounded-lg animate-pulse shrink-0" />
+      )
+    }
+    <div>
+      <p class="font-bold text-white">{item.title}</p>
+      <p class="text-sm">{item.organization} • {item.date}</p>
+    </div>
+  </div>
+  {item.summary && <p class="text-sm">{item.summary}</p>}
+</section>

@@ -1,0 +1,66 @@
+{
+  "education": [
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/ueh-logo.png",
+      "title": "Mercadotecnia",
+      "organization": "Universidad Euro Hispanoamericana",
+      "date": "2022 - actualidad"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/uv-logo.png",
+      "title": "Publicidad y Relaciones Públicas",
+      "organization": "Universidad Veracruzana",
+      "date": "2015 - 2019"
+    }
+  ],
+  "experience": [
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1695438294/portfolio/profile/unitex-logo.png",
+      "title": "Auxiliar de TI",
+      "organization": "Universidad Técnica Superior de Xalapa",
+      "date": "ago 2023 - actualidad",
+      "summary": ""
+    },
+    {
+      "image": "",
+      "title": "Diseñador gráfico",
+      "organization": "Hightek Desarrollo y Consultoría",
+      "date": "may 2023 - jun 2023",
+      "summary": "Participé en diversos proyectos que abarcaron el diseño y desarrollo de plantillas de email, la elaboración de prototipos de vistas para aplicaciones web y la creación de un video promocional enfocado en destacar las funcionalidades de una aplicación web específica."
+    },
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/vreal-logo.png",
+      "title": "Especialista en marketing digital",
+      "organization": "Vreal",
+      "date": "jul 2020 - dic 2022",
+      "summary": "Experiencia especializada en marketing digital dentro del sector inmobiliario: diseño y gestión de campañas en Facebook Ads y Google Ads, desarrollo de landing pages, creación de identidad visual (logotipos, folletos, presentaciones) y plataforma de métricas analíticas. Destacada administración de clientes a través de herramientas CRM."
+    },
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/rtv-logo.png",
+      "title": "Editor de video / Servicio social",
+      "organization": "Radiotelevisión de Veracruz",
+      "date": "ago 2019 - feb 2020",
+      "summary": "Experiencia en prácticas profesionales enfocadas en edición de videos musicales con técnicas multicámara, creación de gráficos animados para redes sociales y capacitación en Final Cut Pro. Habilidad en vectorización de gráficos y apoyo logístico en eventos culturales."
+    }
+  ],
+  "certifications": [
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/coderhouse-logo.png",
+      "title": "Curso de Next.js",
+      "organization": "Coderhouse",
+      "date": "dic 2023"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/coderhouse-logo.png",
+      "title": "Curso de React",
+      "organization": "Coderhouse",
+      "date": "jun 2022"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/google-logo.png",
+      "title": "Conceptos Básicos del Marketing Digital",
+      "organization": "Google",
+      "date": "ene 2020"
+    }
+  ]
+}

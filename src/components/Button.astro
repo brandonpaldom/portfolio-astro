@@ -1,0 +1,20 @@
+---
+interface Props {
+  href: string
+  color: 'btn-primary' | 'btn-secondary'
+  icon?: boolean
+}
+
+const { href, color, icon } = Astro.props
+---
+
+<a href={href} class={`btn ${color}`} target="_blank" rel="noopener">
+  {
+    icon && (
+      <div class="-ml-1.5">
+        <slot name="icon" />
+      </div>
+    )
+  }
+  <slot />
+</a>

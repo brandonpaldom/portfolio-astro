@@ -1,0 +1,9 @@
+---
+import skills from '../data/skills.json'
+
+import Chip from './Chip.astro'
+---
+
+<section class="flex gap-2 flex-wrap justify-center card">
+  {skills.map((skill) => <Chip color="chip-primary" label={skill} />)}
+</section>

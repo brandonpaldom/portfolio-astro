@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import AstroIcon from '../assets/AstroIcon.astro'
+---
+
+<Layout
+  title="Página no encontrada"
+  description="La página que buscas no existe o ha sido movida."
+>
+  <div class="flex flex-col items-center justify-center h-64">
+    <AstroIcon class="animate-pulse" />
+    <p class="mt-4">Error 404.</p>
+    <p>Página no encontrada.</p>
+  </div>
+</Layout>

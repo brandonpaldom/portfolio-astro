@@ -1,0 +1,14 @@
+[
+  {
+    "icon": "EmailIcon",
+    "url": "mailto:brandonpaldom@gmail.com"
+  },
+  {
+    "icon": "LinkedInIcon",
+    "url": "https://www.linkedin.com/in/brandonpaldom"
+  },
+  {
+    "icon": "GitHubIcon",
+    "url": "https://github.com/brandonpaldom"
+  }
+]

@@ -1,0 +1,26 @@
+---
+import profile from '../data/profile.json'
+
+import Chip from './Chip.astro'
+
+import LocationIcon from '../assets/LocationIcon.astro'
+---
+
+<section class="flex flex-col items-center card">
+  <a href="/">
+    <figure>
+      <img
+        src={profile.imageUrl}
+        alt=""
+        width="96"
+        height="96"
+        class="rounded-full mb-2"
+      />
+    </figure>
+  </a>
+  <p class="font-medium text-xl text-neutral-100">{profile.name}</p>
+  <p class="mb-2 text-sm text-neutral-500">{profile.title}</p>
+  <Chip icon label={profile.location}>
+    <LocationIcon />
+  </Chip>
+</section>
