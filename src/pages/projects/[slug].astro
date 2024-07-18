@@ -1,42 +1,42 @@
 ---
-import Alert from '../../components/Alert.astro'
-import Button from '../../components/Button.astro'
-import Chip from '../../components/Chip.astro'
+import Alert from "../../components/Alert.astro";
+import Button from "../../components/Button.astro";
+import Chip from "../../components/Chip.astro";
 
-import Layout from '../../layouts/Layout.astro'
+import Layout from "../../layouts/Layout.astro";
 
-import projects from '../../data/projects.json'
+import projects from "../../data/projects.json";
 
-import GitHubIcon from '../../assets/GitHubIcon.astro'
-import PublicIcon from '../../assets/PublicIcon.astro'
+import GitHubIcon from "../../assets/GitHubIcon.astro";
+import PublicIcon from "../../assets/PublicIcon.astro";
 
 interface Props {
   project: {
-    name: string
-    description: string
-    tags: string[]
-    url: string
-    github: string
-    images: string[]
-    squareImage: boolean
+    name: string;
+    description: string;
+    tags: string[];
+    url: string;
+    github: string;
+    images: string[];
+    squareImage: boolean;
     projects: {
-      client: string
-      url: string
-      images: string
-    }[]
-    development: boolean
-    offline: boolean
-  }
+      client: string;
+      url: string;
+      images: string;
+    }[];
+    development: boolean;
+    offline: boolean;
+  };
 }
 
 export async function getStaticPaths() {
   return projects.map((project) => ({
     params: { slug: project.slug },
     props: { project },
-  }))
+  }));
 }
 
-const { project } = Astro.props
+const { project } = Astro.props;
 ---
 
 <Layout
@@ -89,7 +89,7 @@ const { project } = Astro.props
     project.images && (
       <div
         class={`grid ${
-          project.squareImage ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'
+          project.squareImage ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1"
         } gap-4 mt-4`}
       >
         {project.images.map((image) => (

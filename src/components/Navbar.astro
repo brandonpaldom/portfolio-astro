@@ -1,7 +1,5 @@
 ---
-import navbar from '../data/navbar.json'
-
-const pathname = Astro.url.pathname
+import navbar from "../data/navbar.json";
 ---
 
 <nav class="card">
@@ -19,14 +17,14 @@ const pathname = Astro.url.pathname
 </nav>
 
 <script>
-  const url = window.location.pathname
-  const navLinks = document.querySelectorAll('#nav-link')
+  const url = window.location.pathname;
+  const navLinks = document.querySelectorAll("#nav-link");
 
   navLinks.forEach((link) => {
-    if (link.getAttribute('href') === url) {
-      link.classList.add('btn-primary')
+    if (link.getAttribute("href") === url) {
+      link.classList.add("btn-primary");
     } else {
-      link.classList.add('btn-secondary')
+      link.classList.add("btn-secondary");
     }
-  })
+  });
 </script>
