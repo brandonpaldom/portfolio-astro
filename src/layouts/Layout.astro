@@ -39,12 +39,12 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <div
-      class="fixed inset-y-0 -left-full right-0 md:inset-0 -z-20 bg-[url('/main-background.png')] bg-no-repeat md:bg-top md:bg-[length:2560px_auto]"
+      class="fixed top-0 bottom-0 -left-full right-0 md:inset-0 bg-[url('/main-background.png')] md:bg-top bg-no-repeat md:bg-[length:2560px_auto]"
     >
     </div>
     <div
       class="fixed inset-0 -z-10 bg-[url('/main-pattern.svg')]"
-      style="mask-image: linear-gradient(transparent, black);"
+      style="mask-image: linear-gradient(rgba(0, 0, 0, 0.1), black);"
     >
     </div>
     <div
