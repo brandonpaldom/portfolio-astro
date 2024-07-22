@@ -6,15 +6,6 @@
   body {
     @apply bg-neutral-900 text-neutral-300 antialiased selection:bg-indigo-500 selection:text-white;
   }
-  h1 {
-    @apply text-neutral-100 font-bold text-3xl;
-  }
-  h2 {
-    @apply text-neutral-100 font-bold text-2xl;
-  }
-  h3 {
-    @apply text-neutral-100 font-bold;
-  }
 }
 
 @layer components {
@@ -40,6 +31,6 @@
     @apply bg-neutral-500/10 border-neutral-500/15;
   }
   .chip-secondary {
-    @apply bg-sky-500/10 text-sky-300 border-sky-500/15;
+    @apply bg-lime-500/10 text-lime-300 border-lime-500/15;
   }
 }

@@ -1,9 +1,10 @@
 ---
+import Layout from "../../layouts/Layout.astro";
+
 import Alert from "../../components/Alert.astro";
 import Button from "../../components/Button.astro";
 import Chip from "../../components/Chip.astro";
-
-import Layout from "../../layouts/Layout.astro";
+import Title from "../../components/Title.astro";
 
 import projects from "../../data/projects.json";
 
@@ -43,21 +44,25 @@ const { project } = Astro.props;
   title={project.name}
   description="Aquí encontrarás una selección de mis proyectos más destacados y una descripción de mi experiencia en el campo de la tecnología y el diseño web."
 >
-  <h1>{project.name}</h1>
+  <Title variant="h1">{project.name}</Title>
   {
     project.development && (
       <div class="mt-4">
-        <Alert>
-          Este proyecto está en desarrollo. Es posible que algunas funciones no
-          estén disponibles.
-        </Alert>
+        <Alert
+          title="En desarrollo"
+          description="Este proyecto está en desarrollo. Es posible que algunas funciones no estén disponibles."
+        />
       </div>
     )
   }
   {
     project.offline && (
       <div class="mt-4">
-        <Alert>Este proyecto está actualmente fuera de línea.</Alert>
+        <Alert
+          title="Fuera de línea"
+          description="Este proyecto está actualmente fuera de línea."
+          variant="error"
+        />
       </div>
     )
   }

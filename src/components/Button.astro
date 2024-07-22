@@ -5,10 +5,10 @@ interface Props {
   icon?: boolean;
 }
 
-const { href, color, icon } = Astro.props;
+const { href, color = "btn-primary", icon } = Astro.props;
 ---
 
-<a href={href} class={`btn ${color}`} target="_blank" rel="noopener">
+<a href={href} class:list={["btn", color]} target="_blank" rel="noopener">
   {
     icon && (
       <div class="-ml-1.5">
