@@ -75,7 +75,7 @@ const { project } = Astro.props;
   <div class="flex gap-2 flex-wrap mt-4">
     {
       project.url && (
-        <Button icon href={project.url} color="btn-primary">
+        <Button icon href={project.url}>
           <PublicIcon slot="icon" />
           Ver proyecto
         </Button>
