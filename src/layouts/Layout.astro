@@ -4,8 +4,8 @@ import "@styles/base.css";
 import Profile from "@components/Profile.astro";
 import Skills from "@components/Skills.astro";
 import Navbar from "@components/Navbar.astro";
-import Contact from "@components/Contact.astro";
 import Footer from "@components/Footer.astro";
+import Card from "@components/Card.astro";
 
 interface Props {
   title: string;
@@ -46,21 +46,18 @@ const { title, description } = Astro.props;
       style="mask-image: linear-gradient(rgba(0, 0, 0, 0.1), black);"
     >
     </div>
-    <div
-      class="flex flex-col lg:flex-row gap-4 max-w-screen-xl px-4 mx-auto pt-4"
-    >
+    <div class="flex flex-col lg:flex-row gap-4 px-4 w-fit mx-auto pt-4">
       <aside>
         <div class="flex flex-col gap-4 shrink-0 lg:w-80 lg:sticky lg:top-4">
           <Profile />
-          <Contact />
           <Skills />
         </div>
       </aside>
-      <main class="flex flex-col gap-4 grow">
+      <main class="flex flex-col gap-4 max-w-3xl">
         <Navbar />
-        <article class="card">
+        <Card p="p-6" class="flex-col">
           <slot />
-        </article>
+        </Card>
         <Footer />
       </main>
     </div>

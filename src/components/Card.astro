@@ -1,0 +1,12 @@
+---
+interface Props {
+  p?: "p-4" | "p-6";
+  class?: string;
+}
+
+const { p = "p-4", class: className, ...rest } = Astro.props;
+---
+
+<div class:list={["card flex", p, className]} {...rest}>
+  <slot />
+</div>

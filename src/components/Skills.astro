@@ -1,9 +1,10 @@
 ---
-import skills from "@data/skills.json";
-
+import Card from "./Card.astro";
 import Chip from "./Chip.astro";
+
+import skills from "@data/skills.json";
 ---
 
-<section class="flex gap-2 flex-wrap justify-center card">
+<Card p="p-6" class="gap-2 flex-wrap justify-center">
   {skills.map((skill) => <Chip color="chip-primary" label={skill} />)}
-</section>
+</Card>

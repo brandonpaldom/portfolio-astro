@@ -16,13 +16,16 @@
     @apply rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-300;
   }
   .btn-primary {
-    @apply bg-neutral-100 text-neutral-900 hover:bg-neutral-200;
+    @apply bg-neutral-100 text-neutral-900 hover:bg-neutral-200 shadow;
   }
   .btn-secondary {
-    @apply bg-neutral-800 text-neutral-100 hover:bg-neutral-700;
+    @apply bg-neutral-500/10 text-neutral-100 hover:bg-neutral-700 shadow;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-neutral-100 hover:bg-neutral-800 shadow-none;
   }
   .card {
-    @apply rounded-lg bg-neutral-900/70 p-4 border border-neutral-800 shadow-lg backdrop-blur;
+    @apply bg-neutral-900/70 border border-neutral-800 rounded-lg shadow-lg backdrop-blur;
   }
   .chip {
     @apply rounded-full px-3 py-1.5 text-xs font-medium border shadow;

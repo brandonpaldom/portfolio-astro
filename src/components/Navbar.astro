@@ -1,21 +1,24 @@
 ---
-import navbar from "@data/navbar.json";
+import Card from "./Card.astro";
 
-const currentPath = Astro.url.pathname;
+const { pathname } = Astro.url;
 ---
 
-<nav class="flex items-center gap-2 card">
-  {
-    navbar.map(({ href, text }) => (
-      <a
-        href={href}
-        class:list={[
-          "btn",
-          href === currentPath ? "btn-primary" : "btn-secondary",
-        ]}
-      >
-        {text}
-      </a>
-    ))
-  }
-</nav>
+<Card class="items-center gap-2">
+  <a
+    href="/"
+    class:list={[
+      "btn",
+      pathname === "/" || pathname.includes("projects")
+        ? "btn-primary"
+        : "btn-secondary",
+    ]}>Portafolio</a
+  >
+  <a
+    href="/resume"
+    class:list={[
+      "btn",
+      pathname.includes("resume") ? "btn-primary" : "btn-secondary",
+    ]}>Currículum</a
+  >
+</Card>
