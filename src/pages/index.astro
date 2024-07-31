@@ -12,9 +12,9 @@ import projects from "@data/projects.json";
   description="Aquí encontrarás una selección de mis proyectos más destacados y una descripción de mi experiencia en el campo de la tecnología y el diseño web."
 >
   <Title variant="h1">Portafolio</Title>
-  <ul
+  <div
     class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 mt-4"
   >
     {projects.map((project) => <ProjectCard project={project} />)}
-  </ul>
+  </div>
 </Layout>

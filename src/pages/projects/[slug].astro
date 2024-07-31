@@ -98,9 +98,7 @@ const { project } = Astro.props;
         } gap-4 mt-4`}
       >
         {project.images.map((image) => (
-          <figure>
-            <img src={image} alt={project.name} class="rounded-lg" />
-          </figure>
+          <img src={image} alt={project.name} class="rounded-lg" />
         ))}
       </div>
     )
@@ -110,9 +108,7 @@ const { project } = Astro.props;
       <div class="grid grid-cols-1 gap-6 mt-4">
         {project.projects.map((project) => (
           <div>
-            <figure>
-              <img src={project.images} alt="" class="rounded-lg" />
-            </figure>
+            <img src={project.images} alt="" class="rounded-lg" />
             {project.url && (
               <div class="flex gap-4 items-center flex-wrap justify-between mt-4 ring-1 p-2 pl-4 rounded-lg ring-neutral-800">
                 <div>

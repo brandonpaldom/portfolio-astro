@@ -1,6 +1,7 @@
 ---
 import "@styles/base.css";
 
+import Background from "@components/Background.astro";
 import Profile from "@components/Profile.astro";
 import Skills from "@components/Skills.astro";
 import Navbar from "@components/Navbar.astro";
@@ -37,15 +38,7 @@ const { title, description } = Astro.props;
     />
   </head>
   <body>
-    <div
-      class="fixed top-0 bottom-0 -left-full right-0 md:inset-0 -z-10 bg-[url('/main-background.png')] md:bg-top bg-no-repeat md:bg-[length:2560px_auto]"
-    >
-    </div>
-    <div
-      class="fixed inset-0 -z-20 bg-[url('/main-pattern.svg')]"
-      style="mask-image: linear-gradient(rgba(0, 0, 0, 0.1), black);"
-    >
-    </div>
+    <Background />
     <div class="flex flex-col lg:flex-row gap-4 px-4 w-fit mx-auto pt-4">
       <aside>
         <div class="flex flex-col gap-4 shrink-0 lg:w-80 lg:sticky lg:top-4">
