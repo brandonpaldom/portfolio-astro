@@ -12,7 +12,7 @@ const { project } = Astro.props;
 
 <a
   href={`/projects/${project.slug}`}
-  class="bg-neutral-800 hover:bg-neutral-700 text-neutral-100 rounded-lg transition-colors duration-300"
+  class="rounded-lg bg-neutral-800 text-neutral-100 transition-colors duration-300 hover:bg-neutral-700"
 >
   <img
     src={project.coverImage}
@@ -21,7 +21,7 @@ const { project } = Astro.props;
     height="600"
     class="rounded-t-lg"
   />
-  <div class="px-4 py-3 rounded-b-lg">
-    <p class="font-semibold truncate">{project.name}</p>
+  <div class="rounded-b-lg px-4 py-3">
+    <p class="truncate font-semibold">{project.name}</p>
   </div>
 </a>

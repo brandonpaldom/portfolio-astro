@@ -14,16 +14,16 @@ import contact from "@data/contact.json";
 <Card p="p-6" class="flex-col items-center">
   <a
     href="/"
-    class="border-2 border-indigo-500 rounded-full w-24 h-24 flex items-center justify-center mb-2"
+    class="mb-2 flex h-24 w-24 items-center justify-center rounded-full border-2 border-indigo-500"
   >
-    <img src={profile.imageUrl} alt="" class="rounded-full w-20 h-20" />
+    <img src={profile.imageUrl} alt="" class="h-20 w-20 rounded-full" />
   </a>
-  <p class="text-neutral-100 font-semibold text-xl">{profile.name}</p>
-  <p class="text-neutral-500 text-sm">{profile.title}</p>
+  <p class="text-xl font-semibold text-neutral-100">{profile.name}</p>
+  <p class="text-sm text-neutral-500">{profile.title}</p>
   <Chip icon label={profile.location} class="mt-2">
     <LocationIcon />
   </Chip>
-  <div class="flex mt-2">
+  <div class="mt-2 flex">
     {
       contact.map((item) => (
         <a

@@ -13,27 +13,27 @@
     @apply flex items-center gap-2 rounded-lg px-4 py-2 font-semibold transition-colors duration-300;
   }
   .btn-icon {
-    @apply rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-300;
+    @apply flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300;
   }
   .btn-primary {
-    @apply bg-neutral-100 text-neutral-900 hover:bg-neutral-200 shadow;
+    @apply bg-neutral-100 text-neutral-900 shadow hover:bg-neutral-200;
   }
   .btn-secondary {
-    @apply bg-neutral-800 text-neutral-100 hover:bg-neutral-700 shadow;
+    @apply bg-neutral-800 text-neutral-100 shadow hover:bg-neutral-700;
   }
   .btn-ghost {
-    @apply bg-transparent text-neutral-100 hover:bg-neutral-800 shadow-none;
+    @apply bg-transparent text-neutral-100 shadow-none hover:bg-neutral-800;
   }
   .card {
-    @apply bg-neutral-900/70 border border-neutral-800 rounded-lg shadow-lg backdrop-blur;
+    @apply rounded-lg border border-neutral-800 bg-neutral-900/70 shadow-lg backdrop-blur;
   }
   .chip {
-    @apply rounded-full px-3 py-1.5 text-xs font-medium border shadow;
+    @apply rounded-full border px-3 py-1.5 text-xs font-medium shadow;
   }
   .chip-primary {
-    @apply bg-neutral-500/10 text-neutral-100 border-neutral-500/15;
+    @apply border-neutral-500/15 bg-neutral-500/10 text-neutral-100;
   }
   .chip-secondary {
-    @apply bg-lime-500/10 text-lime-300 border-lime-500/15;
+    @apply border-lime-500/15 bg-lime-500/10 text-lime-300;
   }
 }

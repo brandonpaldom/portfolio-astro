@@ -12,15 +12,15 @@ import resume from "@data/resume.json";
   description="Conozca mis habilidades y experiencia profesional en el desarrollo web y el diseño gráfico en mi página de currículum."
 >
   <Title variant="h1">Currículum</Title>
-  <article class="flex flex-col gap-4 mt-4">
+  <article class="mt-4 flex flex-col gap-4">
     <Title variant="h2">Educación</Title>
     {resume.education.map((item) => <ResumeItem item={item} />)}
   </article>
-  <article class="flex flex-col gap-4 mt-4">
+  <article class="mt-4 flex flex-col gap-4">
     <Title variant="h2">Experiencia</Title>
     {resume.experience.map((item) => <ResumeItem item={item} />)}
   </article>
-  <article class="flex flex-col gap-4 mt-4">
+  <article class="mt-4 flex flex-col gap-4">
     <Title variant="h2">Certificaciones</Title>
     {resume.certifications.map((item) => <ResumeItem item={item} />)}
   </article>

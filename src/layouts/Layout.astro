@@ -40,15 +40,15 @@ const { title, description } = Astro.props;
   <body>
     <Background />
     <div
-      class="flex flex-col lg:flex-row justify-center gap-4 px-4 pt-4 max-w-screen-xl mx-auto"
+      class="mx-auto flex max-w-screen-xl flex-col justify-center gap-4 px-4 pt-4 lg:flex-row"
     >
       <aside>
-        <div class="flex flex-col gap-4 shrink-0 lg:w-80 lg:sticky lg:top-4">
+        <div class="flex shrink-0 flex-col gap-4 lg:sticky lg:top-4 lg:w-80">
           <Profile />
           <SkillCarousels />
         </div>
       </aside>
-      <main class="flex flex-col gap-4 grow">
+      <main class="flex grow flex-col gap-4">
         <Navbar />
         <Card p="p-6" class="flex-col">
           <slot />
