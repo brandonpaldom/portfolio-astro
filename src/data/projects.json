@@ -38,9 +38,9 @@
   },
   {
     "id": "73TDrCBePvuSeyQVHt9v",
-    "slug": "homely-marketplace",
+    "slug": "homely-real-estate-marketplace",
     "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/homely-marketplace-1.jpg",
-    "name": "Homely Marketplace",
+    "name": "Homely Real Estate Marketplace",
     "tags": ["Next.js", "Cloudinary"],
     "description": "Homely es una plataforma para encontrar propiedades inmobiliarias. En este sitio podrás encontrar propiedad de tus sueños de forma fácil. Fue desarrollada con Next.js y Cloudinary.",
     "client": "Homely",
@@ -72,12 +72,12 @@
   },
   {
     "id": "EcVUn8F72qcvxSwaVELM",
-    "slug": "barber-vue-appointments",
+    "slug": "barbervue-appointment-scheduling",
     "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-2.jpg",
-    "name": "BarberVue Appointments",
+    "name": "BarverVue Appointment Scheduling",
     "tags": ["Vue.js", "Tailwind CSS", "MongoDB", "Express", "Node.js"],
-    "description": "Barber Vue es una aplicación web para agendar citas en una barbería. Fue desarrollada con Vue.js, Tailwind CSS, MongoDB, Express y Node.js. Accede a la plataforma con las siguientes credenciales: email <client@mail.com>, password <password>. Y comienza a agendar tus citas.",
-    "client": "Barber Vue",
+    "description": "BarberVue es una aplicación web para agendar citas en una barbería. Fue desarrollada con Vue.js, Tailwind CSS, MongoDB, Express y Node.js. Accede a la plataforma con las siguientes credenciales: email <client@mail.com>, password <password>. Y comienza a agendar tus citas.",
+    "client": "BarberVue",
     "url": "https://dazzling-travesseiro-ab7e24.netlify.app/",
     "github": "https://github.com/brandonpaldom/barber-vue-frontend",
     "images": [
