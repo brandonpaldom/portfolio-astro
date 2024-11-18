@@ -71,26 +71,6 @@
     ]
   },
   {
-    "id": "EcVUn8F72qcvxSwaVELM",
-    "slug": "barbervue-appointment-scheduling",
-    "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-2.jpg",
-    "name": "BarverVue Appointment Scheduling",
-    "tags": ["Vue.js", "Tailwind CSS", "MongoDB", "Express", "Node.js"],
-    "description": "BarberVue es una aplicación web para agendar citas en una barbería. Fue desarrollada con Vue.js, Tailwind CSS, MongoDB, Express y Node.js. Accede a la plataforma con las siguientes credenciales: email <client@mail.com>, password <password>. Y comienza a agendar tus citas.",
-    "client": "BarberVue",
-    "url": "https://dazzling-travesseiro-ab7e24.netlify.app/",
-    "github": "https://github.com/brandonpaldom/barber-vue-frontend",
-    "images": [
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-1.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-2.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-3.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021185/portfolio/projects/barber-vue-4.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-5.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-6.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1689021184/portfolio/projects/barber-vue-7.jpg"
-    ]
-  },
-  {
     "id": "wwdBEiC2BgFwN5mcn2Wc",
     "slug": "express-travel",
     "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916578/portfolio/projects/express-travel-1.jpg",
