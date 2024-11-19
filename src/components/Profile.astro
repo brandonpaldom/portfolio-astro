@@ -8,6 +8,7 @@ import LinkedInIcon from "@assets/LinkedInIcon.astro";
 
 import profile from "@data/profile.json";
 import contact from "@data/contact.json";
+import PublicIcon from "@assets/PublicIcon.astro";
 ---
 
 <section class="card flex flex-col items-start p-6 md:items-center">
@@ -25,18 +26,17 @@ import contact from "@data/contact.json";
       </figure>
     </a>
     <div class="flex flex-col items-start md:items-center">
-      <h1 class="text-xl font-semibold text-neutral-100">{profile.name}</h1>
+      <h1 class="text-xl font-semibold text-neutral-100" aria-level="1">
+        {profile.name}
+      </h1>
       <p class="text-sm">{profile.title}</p>
       <Chip icon label={profile.location} class="mt-2">
         <LocationIcon />
       </Chip>
     </div>
   </div>
-  <div class="mt-4 flex w-full flex-col items-center justify-center">
-    <Chip icon label="Disponible para proyectos">
-      <div class="h-2 w-2 animate-pulse rounded-full bg-green-400"></div>
-    </Chip>
-    <div class="mt-4 flex">
+  <div class="mt-2 flex w-full flex-col items-center justify-center">
+    <div class="flex">
       {
         contact.map((item) => (
           <a
@@ -52,5 +52,9 @@ import contact from "@data/contact.json";
         ))
       }
     </div>
+    <Chip icon label="Disponible para proyectos" class="mt-4">
+      <span class="inline-flex h-2 w-2 animate-pulse rounded-full bg-green-400"
+      ></span>
+    </Chip>
   </div>
 </section>
