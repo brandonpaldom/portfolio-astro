@@ -1,5 +1,4 @@
 ---
-import Card from "./Card.astro";
 import SkillCarousel from "./SkillCarousel.astro";
 
 const coreSkills = ["HTML", "CSS", "JavaScript", "TypeScript"];
@@ -7,8 +6,8 @@ const frontendSkills = ["React", "Next.js", "Astro", "Maizzle", "Tailwind CSS"];
 const backendSkills = ["Node.js", "Express", "MongoDB"];
 ---
 
-<Card p="p-6" class="relative flex flex-col overflow-hidden">
+<section class="card relative flex flex-col overflow-hidden p-6">
   <SkillCarousel skills={coreSkills} />
   <SkillCarousel skills={frontendSkills} reverse={true} />
   <SkillCarousel skills={backendSkills} />
-</Card>
+</section>

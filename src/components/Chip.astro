@@ -9,12 +9,12 @@ interface Props {
 const { color = "chip-primary", icon, label, class: className } = Astro.props;
 ---
 
-<div class:list={["chip flex items-center gap-1.5", color, className]}>
+<div class:list={["chip flex items-center", color, className]}>
   {
     icon && (
-      <div class="-ml-1.5">
+      <span class="-ml-1.5 mr-1.5">
         <slot />
-      </div>
+      </span>
     )
   }
   <span>{label}</span>

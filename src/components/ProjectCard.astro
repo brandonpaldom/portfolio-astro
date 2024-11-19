@@ -10,18 +10,21 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<a
-  href={`/projects/${project.slug}`}
+<article
   class="rounded-lg bg-neutral-800 text-neutral-100 transition-colors duration-300 hover:bg-neutral-700"
 >
-  <img
-    src={project.coverImage}
-    alt=""
-    width="800"
-    height="600"
-    class="rounded-t-lg"
-  />
-  <div class="rounded-b-lg px-4 py-3">
-    <p class="truncate font-semibold">{project.name}</p>
-  </div>
-</a>
+  <a href={`/projects/${project.slug}`}>
+    <figure>
+      <img
+        src={project.coverImage}
+        alt=""
+        width="800"
+        height="600"
+        class="rounded-t-lg"
+      />
+    </figure>
+    <div class="rounded-b-lg px-4 py-3">
+      <h3 class="truncate font-semibold">{project.name}</h3>
+    </div>
+  </a>
+</article>

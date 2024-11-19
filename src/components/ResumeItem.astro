@@ -12,25 +12,27 @@ interface Props {
 const { item } = Astro.props;
 ---
 
-<section class="flex flex-col gap-2">
+<article class="flex flex-col gap-2">
   <div class="flex items-start gap-4">
     {
       item.image ? (
-        <img
-          src={item.image}
-          alt=""
-          width="48"
-          height="48"
-          class="rounded-lg"
-        />
+        <figure>
+          <img
+            src={item.image}
+            alt=""
+            width="48"
+            height="48"
+            class="rounded-lg"
+          />
+        </figure>
       ) : (
         <div class="h-12 w-12 shrink-0 animate-pulse rounded-lg bg-neutral-800" />
       )
     }
     <div>
-      <div class="font-semibold text-neutral-100">{item.title}</div>
+      <h3 class="font-semibold text-neutral-100">{item.title}</h3>
       <p class="text-sm">{item.organization} • {item.date}</p>
     </div>
   </div>
   {item.summary && <p class="text-sm">{item.summary}</p>}
-</section>
+</article>

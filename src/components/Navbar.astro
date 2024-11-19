@@ -1,10 +1,8 @@
 ---
-import Card from "./Card.astro";
-
 const { pathname } = Astro.url;
 ---
 
-<Card class="items-center gap-2">
+<nav class="card flex items-center gap-2 p-4">
   <a
     href="/"
     class:list={[
@@ -21,4 +19,4 @@ const { pathname } = Astro.url;
       pathname.includes("resume") ? "btn-primary" : "btn-secondary",
     ]}>Currículum</a
   >
-</Card>
+</nav>
