@@ -36,4 +36,13 @@
   .chip-secondary {
     @apply border-lime-500/15 bg-lime-500/10 text-lime-300;
   }
+  .heading1 {
+    @apply text-[2rem] leading-[2.5rem];
+  }
+  .heading2 {
+    @apply text-[1.75rem] leading-[2.25rem];
+  }
+  .heading3 {
+    @apply text-[1.25rem] leading-[1.75rem];
+  }
 }

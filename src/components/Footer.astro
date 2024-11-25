@@ -3,12 +3,32 @@
 ---
 
 <footer class="mb-4 flex items-center justify-center">
-  <p class="text-neutral-600">
+  <p
+    class="animate-gradient bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+  >
     Construido con <a
       href="https://astro.build/"
-      class="transition-colors duration-300 hover:text-neutral-500"
       target="_blank"
       rel="noopener noreferrer">Astro</a
     >
   </p>
 </footer>
+
+<style>
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 5s ease-in-out infinite alternate;
+  }
+</style>
