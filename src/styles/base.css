@@ -16,33 +16,30 @@
     @apply flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300;
   }
   .btn-primary {
-    @apply bg-neutral-100 text-neutral-900 shadow hover:bg-neutral-200;
+    @apply bg-indigo-400 text-neutral-900 shadow hover:bg-indigo-500;
   }
   .btn-secondary {
     @apply bg-neutral-800 text-neutral-100 shadow hover:bg-neutral-700;
   }
   .btn-ghost {
-    @apply bg-transparent text-neutral-100 shadow-none hover:bg-neutral-800;
+    @apply bg-transparent text-neutral-100 hover:bg-neutral-800;
   }
   .card {
-    @apply rounded-lg border border-neutral-800 bg-neutral-900/70 shadow-lg backdrop-blur;
+    @apply rounded-xl border border-neutral-800 bg-neutral-900/70 shadow-lg backdrop-blur;
   }
   .chip {
     @apply rounded-full border px-3 py-1.5 text-xs font-medium shadow;
   }
   .chip-primary {
-    @apply border-neutral-500/15 bg-neutral-500/10 text-neutral-100;
-  }
-  .chip-secondary {
     @apply border-lime-500/15 bg-lime-500/10 text-lime-300;
   }
+  .chip-secondary {
+    @apply border-neutral-500/15 bg-neutral-500/10 text-neutral-100;
+  }
   .heading1 {
-    @apply text-[2rem] leading-[2.5rem];
+    @apply text-[2rem] font-bold leading-[2.5rem];
   }
   .heading2 {
-    @apply text-[1.75rem] leading-[2.25rem];
-  }
-  .heading3 {
-    @apply text-[1.25rem] leading-[1.75rem];
+    @apply text-[1.75rem] font-bold leading-[2.25rem];
   }
 }

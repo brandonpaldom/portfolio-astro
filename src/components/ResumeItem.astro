@@ -31,7 +31,11 @@ const { item } = Astro.props;
     }
     <div>
       <h3 class="font-semibold text-neutral-100">{item.title}</h3>
-      <p class="text-sm">{item.organization} • {item.date}</p>
+      <p class="text-sm">
+        {item.organization}
+        <span class="text-indigo-400">•</span>
+        {item.date}
+      </p>
     </div>
   </div>
   {item.summary && <p class="text-sm">{item.summary}</p>}

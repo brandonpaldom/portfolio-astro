@@ -8,53 +8,51 @@ import LinkedInIcon from "@assets/LinkedInIcon.astro";
 
 import profile from "@data/profile.json";
 import contact from "@data/contact.json";
-import PublicIcon from "@assets/PublicIcon.astro";
 ---
 
-<section class="card flex flex-col items-start p-6 md:items-center">
-  <div class="flex flex-row gap-4 md:flex-col md:items-center md:gap-0">
-    <a
-      href="/"
-      class="mb-2 flex h-24 w-24 items-center justify-center rounded-full border-2 border-indigo-500"
-    >
-      <figure>
-        <img
-          src={profile.imageUrl}
-          alt="Foto de perfil"
-          class="h-20 w-20 rounded-full"
-        />
-      </figure>
-    </a>
-    <div class="flex flex-col items-start md:items-center">
-      <h1 class="heading3 font-semibold text-neutral-100" aria-level="1">
-        {profile.name}
-      </h1>
-      <p class="text-sm">{profile.title}</p>
-      <Chip icon label={profile.location} class="mt-2">
-        <LocationIcon />
-      </Chip>
-    </div>
+<section class="card flex flex-col items-center p-6">
+  <a
+    href="/"
+    class="flex h-24 w-24 items-center justify-center rounded-full border-2 border-indigo-400"
+  >
+    <figure>
+      <img
+        src={profile.imageUrl}
+        alt="Foto de perfil"
+        class="h-20 w-20 rounded-full"
+      />
+    </figure>
+  </a>
+  <h1 class="mt-4 text-lg font-bold text-neutral-100" aria-level="1">
+    {profile.name}
+  </h1>
+  <p class="text-sm">{profile.title}</p>
+  <Chip icon label={profile.location} color="chip-secondary" class="mt-4">
+    <LocationIcon width="w-4" height="h-4" />
+  </Chip>
+  <div class="mt-4 flex gap-2">
+    {
+      contact.map((item) => (
+        <a
+          href={item.url}
+          class="btn-icon btn-ghost"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {item.icon === "EmailIcon" && <EmailIcon />}
+          {item.icon === "GitHubIcon" && <GitHubIcon />}
+          {item.icon === "LinkedInIcon" && <LinkedInIcon />}
+        </a>
+      ))
+    }
   </div>
-  <div class="mt-2 flex w-full flex-col items-center justify-center">
-    <div class="flex">
-      {
-        contact.map((item) => (
-          <a
-            href={item.url}
-            class="btn-icon btn-ghost"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {item.icon === "EmailIcon" && <EmailIcon />}
-            {item.icon === "GitHubIcon" && <GitHubIcon />}
-            {item.icon === "LinkedInIcon" && <LinkedInIcon />}
-          </a>
-        ))
-      }
-    </div>
-    <Chip icon label="Disponible para proyectos" class="mt-4">
-      <span class="inline-flex h-2 w-2 animate-pulse rounded-full bg-green-400"
-      ></span>
-    </Chip>
-  </div>
+  <Chip
+    icon
+    label="Disponible para proyectos"
+    color="chip-secondary"
+    class="mt-4"
+  >
+    <span class="inline-flex h-2 w-2 animate-pulse rounded-full bg-green-400"
+    ></span>
+  </Chip>
 </section>

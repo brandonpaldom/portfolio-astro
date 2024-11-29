@@ -66,7 +66,7 @@ const { project } = Astro.props;
     )
   }
   <div class="mt-4 flex flex-wrap items-center gap-2">
-    {project.tags.map((tag) => <Chip label={tag} color="chip-secondary" />)}
+    {project.tags.map((tag) => <Chip label={tag} />)}
   </div>
   <p class="mt-4">{project.description}</p>
   {

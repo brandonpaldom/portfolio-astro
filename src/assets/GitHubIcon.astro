@@ -1,5 +1,17 @@
+---
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+const { width = "h-5", height = "h-5" } = Astro.props;
+---
+
 <svg
-  class="h-4 w-4 fill-current"
+  class:list={[width, height, "fill-current"]}
+  stroke="currentColor"
+  fill="currentColor"
+  stroke-width="0"
   viewBox="0 0 496 512"
   xmlns="http://www.w3.org/2000/svg"
   ><path
