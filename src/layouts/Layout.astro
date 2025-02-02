@@ -1,5 +1,5 @@
 ---
-import "@styles/base.css";
+import "@styles/global.css";
 
 import Background from "@components/Background.astro";
 import Profile from "@components/Profile.astro";
@@ -42,7 +42,9 @@ const { title, subtitle, description } = Astro.props;
       data-key="kJyOJz23V2iAZRK0zOQtTA"
       async></script>
   </head>
-  <body>
+  <body
+    class="bg-neutral-900 text-neutral-400 antialiased selection:bg-indigo-500 selection:text-white"
+  >
     <Background />
     <div
       class="mx-auto flex max-w-[480px] flex-col justify-center gap-4 px-4 pt-6 md:max-w-screen-xl md:flex-row"
