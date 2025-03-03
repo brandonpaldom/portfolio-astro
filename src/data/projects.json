@@ -118,30 +118,22 @@
       {
         "client": "Veramonte Residencial",
         "url": "https://veramonteresidencial.vreal.mx/",
-        "images": [
-          "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/real-estate-landing-pages-1.jpg"
-        ]
+        "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/real-estate-landing-pages-1.jpg"
       },
       {
         "client": "City Blue Santa Fe",
         "url": "https://cityblue.vreal.mx/",
-        "images": [
-          "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/real-estate-landing-pages-2.jpg"
-        ]
+        "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/real-estate-landing-pages-2.jpg"
       },
       {
         "client": "Mareazul Real Estate",
         "url": "https://mareazul.vreal.mx/bf/es/",
-        "images": [
-          "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/real-estate-landing-pages-3.jpg"
-        ]
+        "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/real-estate-landing-pages-3.jpg"
       },
       {
         "client": "Aura Towers",
         "url": "https://hercesa.vreal.mx/aura",
-        "images": [
-          "https://res.cloudinary.com/dlomynswh/image/upload/v1678916573/portfolio/projects/real-estate-landing-pages-4.jpg"
-        ]
+        "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916573/portfolio/projects/real-estate-landing-pages-4.jpg"
       }
     ]
   },

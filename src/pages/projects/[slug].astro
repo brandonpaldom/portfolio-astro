@@ -9,6 +9,7 @@ import projects from "@data/projects.json";
 
 import GitHubIcon from "@assets/GitHubIcon.astro";
 import PublicIcon from "@assets/PublicIcon.astro";
+import { Image } from "astro:assets";
 
 interface Props {
   project: {
@@ -22,7 +23,7 @@ interface Props {
     projects: {
       client: string;
       url: string;
-      images: string;
+      image: string;
     }[];
     development: boolean;
     offline: boolean;
@@ -37,6 +38,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
+console.log(project);
 ---
 
 <Layout
@@ -95,9 +97,13 @@ const { project } = Astro.props;
         } mt-4 gap-4`}
       >
         {project.images.map((image) => (
-          <figure>
-            <img src={image} alt={project.name} class="rounded-lg" />
-          </figure>
+          <Image
+            src={image}
+            alt={project.name}
+            width={800}
+            height={800}
+            class="rounded-lg"
+          />
         ))}
       </div>
     )
@@ -121,9 +127,13 @@ const { project } = Astro.props;
                 </Button>
               </div>
             )}
-            <figure>
-              <img src={project.images} alt="" class="rounded-lg" />
-            </figure>
+            <Image
+              src={project.image}
+              alt=""
+              width={1200}
+              height={900}
+              class="rounded-lg"
+            />
           </article>
         ))}
       </div>

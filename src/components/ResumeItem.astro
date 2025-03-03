@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   item: {
     image: string;
@@ -16,15 +18,13 @@ const { item } = Astro.props;
   <div class="flex items-start gap-4">
     {
       item.image ? (
-        <figure class="h-12 w-12 shrink-0">
-          <img
-            src={item.image}
-            alt=""
-            width="48"
-            height="48"
-            class="rounded-lg"
-          />
-        </figure>
+        <Image
+          src={item.image}
+          alt=""
+          width={48}
+          height={48}
+          class="h-12 w-12 shrink-0 rounded-lg"
+        />
       ) : (
         <div class="h-12 w-12 shrink-0 animate-pulse rounded-lg bg-neutral-800" />
       )

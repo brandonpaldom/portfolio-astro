@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   project: {
     slug: string;
@@ -14,15 +16,13 @@ const { project } = Astro.props;
   class="rounded-lg bg-neutral-800 text-neutral-100 transition-colors duration-300 hover:bg-neutral-700"
 >
   <a href={`/projects/${project.slug}`}>
-    <figure>
-      <img
-        src={project.coverImage}
-        alt=""
-        width="800"
-        height="600"
-        class="rounded-t-xl"
-      />
-    </figure>
+    <Image
+      src={project.coverImage}
+      alt={project.name}
+      width={800}
+      height={600}
+      class="rounded-t-xl"
+    />
     <div class="rounded-b-xl px-4 py-3">
       <h3 class="truncate font-semibold">{project.name}</h3>
     </div>
