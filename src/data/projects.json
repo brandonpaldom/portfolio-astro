@@ -1,5 +1,53 @@
 [
   {
+    "id": "jXUDBG92xjBgbEm8NHn2",
+    "slug": "teslo-shop",
+    "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-1.jpg",
+    "name": "Teslo Shop",
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma",
+      "Cloudinary",
+      "PayPal"
+    ],
+    "description": "Teslo Shop es una tienda en línea moderna de ropa inspirada en Tesla, desarrollada con tecnologías de vanguardia como Next.js 15 (con Turbopack), React 19, TypeScript 5 y Tailwind CSS. El proyecto utiliza Prisma ORM conectado a Neon Serverless PostgreSQL para una base de datos escalable y de alto rendimiento, complementado con Cloudinary para la gestión de imágenes.",
+    "client": "Teslo Shop",
+    "url": "https://teslo-shop-bp.vercel.app/",
+    "github": "https://github.com/brandonpaldom/teslo-shop",
+    "images": [
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-1.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-2.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-3.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-4.jpg"
+    ]
+  },
+  {
+    "id": "fFbGfWo7grneAtswcD4H",
+    "slug": "social-media-ads",
+    "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/social-media-ads-cover.jpg",
+    "name": "Social Media Ads",
+    "tags": ["Figma", "Photoshop", "Illustrator"],
+    "description": "Una colección de anuncios para redes sociales que he diseñado para diferentes clientes de la industria inmobiliaria.",
+    "images": [
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/social-media-ads-1.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/social-media-ads-2.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/social-media-ads-3.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916573/portfolio/projects/social-media-ads-4.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/social-media-ads-5.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916574/portfolio/projects/social-media-ads-6.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916573/portfolio/projects/social-media-ads-7.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916578/portfolio/projects/social-media-ads-8.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/social-media-ads-9.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/social-media-ads-10.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/social-media-ads-11.jpg",
+      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/social-media-ads-12.jpg"
+    ],
+    "squareImage": true
+  },
+  {
     "id": "Pr8md2SjferGakEEy5v9",
     "slug": "cystore-ecommerce",
     "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1703292853/portfolio/projects/cystore-ecommerce-1.jpg",
@@ -17,23 +65,6 @@
       "https://res.cloudinary.com/dlomynswh/image/upload/v1703292849/portfolio/projects/cystore-ecommerce-5.jpg",
       "https://res.cloudinary.com/dlomynswh/image/upload/v1703292849/portfolio/projects/cystore-ecommerce-6.jpg",
       "https://res.cloudinary.com/dlomynswh/image/upload/v1703292848/portfolio/projects/cystore-ecommerce-7.jpg"
-    ]
-  },
-  {
-    "id": "jXUDBG92xjBgbEm8NHn2",
-    "slug": "teslo-shop",
-    "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/teslo-shop-1.jpg",
-    "name": "Teslo Shop",
-    "tags": ["Next.js", "TypeScript", "MUI", "MongoDB", "Cloudinary"],
-    "description": "Teslo Shop es una tienda en línea de ropa inspirada en la marca Tesla, desarrollada con Next.js, TypeScript, Tailwind CSS, MongoDB y Cloudinary. Ofrece una experiencia de compra en línea moderna y completa para una variedad de prendas de ropa inspiradas en Tesla, con un diseño limpio y elegante. Con Teslo Shop, los usuarios pueden explorar y comprar ropa de calidad inspirada en Tesla, desde camisetas y sudaderas hasta sombreros y otros accesorios. ¡Bienvenidos a Teslo Shop, la tienda en línea de ropa inspirada en Tesla!",
-    "client": "Teslo Shop",
-    "url": "https://teslo-shop-azure.vercel.app/",
-    "github": "https://github.com/brandonpaldom/teslo-shop",
-    "images": [
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/teslo-shop-1.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/teslo-shop-2.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/teslo-shop-3.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916573/portfolio/projects/teslo-shop-4.jpg"
     ]
   },
   {
@@ -82,29 +113,6 @@
     "images": [
       "https://res.cloudinary.com/dlomynswh/image/upload/v1678916578/portfolio/projects/express-travel-1.jpg"
     ]
-  },
-  {
-    "id": "fFbGfWo7grneAtswcD4H",
-    "slug": "social-media-ads",
-    "coverImage": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/social-media-ads-cover.jpg",
-    "name": "Social Media Ads",
-    "tags": ["Figma", "Photoshop", "Illustrator"],
-    "description": "Una colección de anuncios para redes sociales que he diseñado para diferentes clientes de la industria inmobiliaria.",
-    "images": [
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/social-media-ads-1.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/social-media-ads-2.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/social-media-ads-3.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916573/portfolio/projects/social-media-ads-4.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/social-media-ads-5.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916574/portfolio/projects/social-media-ads-6.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916573/portfolio/projects/social-media-ads-7.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916578/portfolio/projects/social-media-ads-8.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916577/portfolio/projects/social-media-ads-9.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/social-media-ads-10.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/social-media-ads-11.jpg",
-      "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/social-media-ads-12.jpg"
-    ],
-    "squareImage": true
   },
   {
     "id": "aixPfwj9aQ2dA7q6S6wH",
