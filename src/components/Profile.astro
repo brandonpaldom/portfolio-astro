@@ -26,7 +26,7 @@ import contact from "@data/contact.json";
   <h1 class="mt-4 text-xl font-bold text-neutral-100">
     {profile.name}
   </h1>
-  <p class="text-sm">{profile.title}</p>
+  <p class="shiny-text text-sm">{profile.title}</p>
   <Chip icon label={profile.location} color="chip-secondary" class="mt-4">
     <LocationIcon width="w-4" height="h-4" />
   </Chip>
@@ -56,3 +56,29 @@ import contact from "@data/contact.json";
     ></span>
   </Chip>
 </section>
+
+<style>
+  .shiny-text {
+    color: #b5b5b5a4;
+    background: linear-gradient(120deg, #fff0 40%, #fffc, #fff0 60%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    animation: shine 3s linear infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 100%;
+    }
+
+    to {
+      background-position: -100%;
+    }
+  }
+
+  .shiny-text.disabled {
+    animation: none;
+  }
+</style>
