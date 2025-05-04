@@ -4,13 +4,15 @@
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/ueh-logo.png",
       "title": "Mercadotecnia",
       "organization": "Universidad Euro Hispanoamericana",
-      "date": "2022 - presente"
+      "start": "2022",
+      "end": "actualidad"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/uv-logo.png",
       "title": "Publicidad y Relaciones Públicas",
       "organization": "Universidad Veracruzana",
-      "date": "2015 - 2019"
+      "start": "2015",
+      "end": "2019"
     }
   ],
   "experience": [
@@ -18,34 +20,48 @@
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1744127711/portfolio/profile/corebusiness-logo.png",
       "title": "Salesforce Developer Jr.",
       "organization": "Core Business",
-      "date": "abr 2025 - presente"
+      "start": "abr 2025",
+      "end": "actualidad"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1695438294/portfolio/profile/unitex-logo.png",
       "title": "Auxiliar de TI",
       "organization": "Universidad Técnica Superior de Xalapa",
-      "date": "ago 2023 - abr 2025",
-      "summary": ""
+      "start": "ago 2023",
+      "end": "abr 2025",
+      "roles": [
+        {
+          "title": "Profesor de Desarrollo de Sitios Web",
+          "modality": "En línea"
+        },
+        {
+          "title": "Profesor de Computación Básica",
+          "modality": "Presencial"
+        }
+      ]
     },
     {
       "image": "",
       "title": "Diseñador UI/UX",
       "organization": "Hightek Desarrollo y Consultoría",
-      "date": "may 2023 - jun 2023",
+      "start": "may 2023",
+      "end": "jun 2023",
       "summary": "Apoyo en el rediseño de interfaces de usuario, optimizando la experiencia en una plataforma web en fase de actualización. Además, diseñé plantillas de correo electrónico transaccionales y produje un video promocional dinámico para el relanzamiento exitoso de la plataforma."
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/vreal-logo.png",
       "title": "Especialista en Marketing Digital",
       "organization": "Vreal",
-      "date": "jul 2020 - dic 2022",
+      "start": "jul 2020",
+      "end": "dic 2022",
       "summary": "Experiencia en marketing digital en el sector inmobiliario, con habilidades en diseño gráfico, desarrollo de sitios web y landing pages, gestión de campañas publicitarias en redes sociales, uso de plataformas de automatización y gestión de clientes mediante herramientas de CRM."
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/rtv-logo.png",
       "title": "Editor de video (Servicio social)",
       "organization": "Radiotelevisión de Veracruz",
-      "date": "ago 2019 - feb 2020",
+      "start": "ago 2019",
+      "end": "feb 2020",
       "summary": "En RTV realicé mi servicio social, donde adquirí habilidades en edición de video, producción de contenido audiovisual y apoyo en diseño gráfico para redes sociales."
     }
   ],
@@ -54,19 +70,19 @@
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/coderhouse-logo.png",
       "title": "Curso de Next.js",
       "organization": "Coderhouse",
-      "date": "dic 2023"
+      "start": "dic 2023"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/coderhouse-logo.png",
       "title": "Curso de React",
       "organization": "Coderhouse",
-      "date": "jun 2022"
+      "start": "jun 2022"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/google-logo.png",
       "title": "Conceptos Básicos del Marketing Digital",
       "organization": "Google",
-      "date": "ene 2020"
+      "start": "ene 2020"
     }
   ]
 }

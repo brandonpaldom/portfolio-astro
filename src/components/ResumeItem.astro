@@ -1,14 +1,22 @@
 ---
 import { Image } from "astro:assets";
+import RoleTimeline from "./RoleTimeline.astro";
 
 interface Props {
   item: {
     image: string;
     title: string;
     organization: string;
-    date: string;
+    roles?: Role[];
+    start: string;
+    end?: string;
     summary?: string;
   };
+}
+
+interface Role {
+  title: string;
+  modality?: string;
 }
 
 const { item } = Astro.props;
@@ -29,14 +37,15 @@ const { item } = Astro.props;
         <div class="h-12 w-12 shrink-0 animate-pulse rounded-lg bg-neutral-800" />
       )
     }
-    <div>
-      <h3 class="font-semibold text-neutral-100">{item.title}</h3>
-      <p class="text-sm">
-        {item.organization}
-        <span class="text-indigo-400">•</span>
-        {item.date}
+    <div class="flex flex-col">
+      <h3 class="font-semibold text-neutral-100">
+        {item.title}
+      </h3>
+      <p class="text-sm text-neutral-400">
+        {item.organization} • {item.start} {item.end && `- ${item.end}`}
       </p>
     </div>
   </div>
+  {item.roles && <RoleTimeline roles={item.roles} />}
   {item.summary && <p class="text-sm">{item.summary}</p>}
 </article>
