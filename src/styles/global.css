@@ -38,4 +38,7 @@
   .heading2 {
     @apply text-[1.75rem] leading-[2.25rem] font-bold;
   }
+  .heading3 {
+    @apply text-[1.5rem] leading-[2rem] font-semibold;
+  }
 }
