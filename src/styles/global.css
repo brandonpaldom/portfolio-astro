@@ -21,7 +21,7 @@
     @apply bg-transparent text-neutral-100 hover:bg-neutral-800;
   }
   .card {
-    @apply rounded-xl bg-neutral-900/70 shadow-lg ring-1 ring-neutral-800 backdrop-blur-sm;
+    @apply rounded-xl bg-neutral-900/70 shadow-lg ring-1 ring-neutral-800 backdrop-blur-md;
   }
   .chip {
     @apply rounded-full px-3 py-1.5 text-xs font-medium shadow-sm ring-1;

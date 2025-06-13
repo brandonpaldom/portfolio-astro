@@ -10,14 +10,14 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.8",
-    "astro": "^5.8.1",
-    "tailwindcss": "^4.1.8"
+    "@tailwindcss/vite": "^4.1.10",
+    "astro": "^5.9.3",
+    "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.12",
-    "vitest": "^1.0.0"
+    "vitest": "^3.2.3"
   }
 }
