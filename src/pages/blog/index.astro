@@ -14,10 +14,6 @@ const sortedPosts = allPosts
       new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
   );
 
-// Get unique tags for filtering
-const allTags = [
-  ...new Set(sortedPosts.flatMap((post) => post.data.tags || [])),
-];
 ---
 
 <Layout
@@ -32,20 +28,6 @@ const allTags = [
     </p>
   </div>
 
-  {
-    allTags.length > 0 && (
-      <div class="mb-6">
-        <h3 class="heading3 mb-3 font-semibold text-neutral-100">Categorías</h3>
-        <div class="flex flex-wrap gap-2">
-          {allTags.map((tag) => (
-            <span class="chip chip-secondary cursor-pointer transition-colors hover:bg-indigo-500/20 hover:text-indigo-300">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    )
-  }
 
   {
     sortedPosts.length > 0 ? (
