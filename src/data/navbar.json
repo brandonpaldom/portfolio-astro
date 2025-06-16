@@ -4,6 +4,10 @@
     "text": "Portafolio"
   },
   {
+    "href": "/blog",
+    "text": "Blog"
+  },
+  {
     "href": "/resume",
     "text": "Currículum"
   }

@@ -1,0 +1,87 @@
+---
+import Layout from "@layouts/Layout.astro";
+import BlogCard from "@components/BlogCard.astro";
+import BlogSearch from "@components/BlogSearch.astro";
+import { getCollection } from 'astro:content';
+
+// Get all blog posts
+const allPosts = await getCollection('blog');
+
+// Sort posts by publication date (newest first)
+const sortedPosts = allPosts
+  .filter(post => post.data.pubDate)
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+// Get unique tags for filtering
+const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags || []))];
+---
+
+<Layout
+  title="Blog | Brandon Palmeros - Desarrollo Frontend"
+  subtitle="Blog"
+  description="Artículos sobre desarrollo web frontend, JavaScript, React, Astro, y las últimas tendencias en tecnología web."
+>
+  <div class="mb-6">
+    <p class="text-neutral-300 leading-relaxed">
+      Comparto mis experiencias, aprendizajes y reflexiones sobre el desarrollo web frontend, 
+      las últimas tecnologías y mejores prácticas en la industria.
+    </p>
+    <div class="mt-4">
+      <a 
+        href="/blog/rss.xml" 
+        class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3.429 2.571c8.571 0 15.429 6.857 15.429 15.429h-3.429c0-6.857-5.571-12.429-12.429-12.429v-3zM3.429 9.143c3.429 0 6.286 2.857 6.286 6.286h-3.429c0-1.714-1.143-2.857-2.857-2.857v-3.429zM6.857 15.429c0 0.571-0.286 1.143-0.857 1.143s-1.143-0.571-1.143-1.143 0.571-1.143 1.143-1.143 0.857 0.571 0.857 1.143z"></path>
+        </svg>
+        Suscribirse al RSS
+      </a>
+    </div>
+  </div>
+
+  <BlogSearch />
+
+  {allTags.length > 0 && (
+    <div class="mb-6">
+      <h3 class="heading3 font-semibold text-neutral-100 mb-3">Categorías</h3>
+      <div class="flex flex-wrap gap-2">
+        {allTags.map((tag) => (
+          <span class="chip chip-secondary cursor-pointer hover:bg-indigo-500/20 hover:text-indigo-300 transition-colors">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {sortedPosts.length > 0 ? (
+    <div class="grid gap-6 mt-6">
+      {sortedPosts.map((post) => (
+        <BlogCard post={post} />
+      ))}
+    </div>
+  ) : (
+    <div class="text-center py-12">
+      <h3 class="heading3 font-semibold text-neutral-100 mb-2">
+        Próximamente...
+      </h3>
+      <p class="text-neutral-400">
+        Estoy trabajando en contenido interesante para compartir contigo.
+      </p>
+    </div>
+  )}
+</Layout>
+
+<script define:vars={{ posts: sortedPosts.map(post => ({
+  title: post.data.title,
+  description: post.data.description,
+  url: `/blog/${post.slug}`,
+  tags: post.data.tags
+})) }}>
+  // Pass posts data to search component when page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.setBlogPosts) {
+      window.setBlogPosts(posts);
+    }
+  });
+</script>

@@ -13,6 +13,13 @@ const { pathname } = Astro.url;
     ]}>Portafolio</a
   >
   <a
+    href="/blog"
+    class:list={[
+      "btn",
+      pathname.includes("blog") ? "btn-primary" : "btn-secondary",
+    ]}>Blog</a
+  >
+  <a
     href="/resume"
     class:list={[
       "btn",
