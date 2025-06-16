@@ -14,62 +14,86 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate, author = "Brandon Palmeros", tags = [], heroImage } = post.data;
+const {
+  title,
+  description,
+  pubDate,
+  author = "Brandon Palmeros",
+  tags = [],
+  heroImage,
+} = post.data;
 
-const formattedDate = new Intl.DateTimeFormat('es-ES', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
+const formattedDate = new Intl.DateTimeFormat("es-ES", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 }).format(new Date(pubDate));
 ---
 
-<article class="card p-6 hover:ring-2 hover:ring-indigo-500/20 transition-all duration-300">
+<article
+  class="card p-6 transition-all duration-300 hover:ring-2 hover:ring-indigo-500/20"
+>
   <a href={`/blog/${post.slug}`} class="block">
-    {heroImage && (
-      <img 
-        src={heroImage} 
-        alt={title}
-        class="mb-4 rounded-lg w-full h-48 object-cover"
-      />
-    )}
-    
+    {
+      heroImage && (
+        <img
+          src={heroImage}
+          alt={title}
+          class="mb-4 h-48 w-full rounded-lg object-cover"
+        />
+      )
+    }
+
     <header class="mb-4">
-      <h2 class="heading3 font-semibold text-neutral-100 mb-2 hover:text-indigo-400 transition-colors">
+      <h2
+        class="heading3 mb-2 font-semibold text-neutral-100 transition-colors hover:text-indigo-400"
+      >
         {title}
       </h2>
-      
-      <div class="flex flex-wrap items-center gap-2 text-sm text-neutral-400 mb-3">
+
+      <div
+        class="mb-3 flex flex-wrap items-center gap-2 text-sm text-neutral-400"
+      >
         <time datetime={new Date(pubDate).toISOString()}>
           {formattedDate}
         </time>
         <span>•</span>
         <span>{author}</span>
       </div>
-      
-      {tags.length > 0 && (
-        <div class="flex flex-wrap gap-2 mb-3">
-          {tags.slice(0, 3).map((tag) => (
-            <span class="chip chip-secondary text-xs">
-              {tag}
-            </span>
-          ))}
-          {tags.length > 3 && (
-            <span class="chip chip-secondary text-xs">
-              +{tags.length - 3}
-            </span>
-          )}
-        </div>
-      )}
+
+      {
+        tags.length > 0 && (
+          <div class="mb-3 flex flex-wrap gap-2">
+            {tags.slice(0, 3).map((tag) => (
+              <span class="chip chip-secondary text-xs">{tag}</span>
+            ))}
+            {tags.length > 3 && (
+              <span class="chip chip-secondary text-xs">
+                +{tags.length - 3}
+              </span>
+            )}
+          </div>
+        )
+      }
     </header>
-    
-    <p class="text-neutral-300 line-clamp-3 leading-relaxed">
+
+    <p class="line-clamp-3 leading-relaxed text-neutral-300">
       {description}
     </p>
-    
-    <div class="mt-4 flex items-center text-indigo-400 text-sm font-medium">
+
+    <div class="mt-4 flex items-center text-sm font-medium text-indigo-400">
       Leer más
-      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      <svg
+        class="ml-1 h-4 w-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"></path>
       </svg>
     </div>
   </a>
