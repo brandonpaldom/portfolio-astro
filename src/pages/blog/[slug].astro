@@ -1,4 +1,5 @@
 ---
+import BackToTop from "@components/BackToTop.astro";
 import BlogLayout from "@layouts/BlogLayout.astro";
 import { getCollection } from "astro:content";
 
@@ -25,4 +26,7 @@ const { title, description, pubDate, author, tags, heroImage } = post.data;
   heroImage={heroImage}
 >
   <Content />
+  <div class="flex justify-end">
+    <BackToTop />
+  </div>
 </BlogLayout>

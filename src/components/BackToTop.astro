@@ -1,0 +1,20 @@
+---
+
+---
+
+<button id="back-to-top-btn" class="btn btn-secondary">Volver arriba</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const backToTopBtn = document.getElementById("back-to-top-btn");
+
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+  });
+</script>

@@ -10,6 +10,7 @@ import projects from "@data/projects.json";
 import GitHubIcon from "@assets/GitHubIcon.astro";
 import PublicIcon from "@assets/PublicIcon.astro";
 import { Image } from "astro:assets";
+import BackToTop from "@components/BackToTop.astro";
 
 interface Props {
   project: {
@@ -114,6 +115,6 @@ const { project } = Astro.props;
     )
   }
   <div class="mt-4 flex justify-center">
-    <Button href="/" color="btn-secondary">Volver</Button>
+    <BackToTop />
   </div>
 </Layout>
