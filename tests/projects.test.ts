@@ -10,9 +10,7 @@ describe("projects.json", () => {
 
     // Log duplicate slugs if any
     if (slugs.length !== uniqueSlugs.size) {
-      const duplicates = slugs.filter(
-        (slug, index) => slugs.indexOf(slug) !== index,
-      );
+      const duplicates = slugs.filter((slug, index) => slugs.indexOf(slug) !== index);
       console.error("Duplicate slugs found:", duplicates);
     }
   });

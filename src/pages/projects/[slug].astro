@@ -58,11 +58,7 @@ const { project } = Astro.props;
   {
     project.offline && (
       <div class="mt-4">
-        <Alert
-          title="Fuera de línea"
-          description="Este proyecto está actualmente fuera de línea."
-          variant="error"
-        />
+        <Alert title="Fuera de línea" description="Este proyecto está actualmente fuera de línea." variant="error" />
       </div>
     )
   }
@@ -90,19 +86,9 @@ const { project } = Astro.props;
   }
   {
     project.images && (
-      <div
-        class={`grid ${
-          project.squareImage ? "grid-cols-1 lg:grid-cols-2" : "grid-cols-1"
-        } mt-4 gap-4`}
-      >
+      <div class={`grid ${project.squareImage ? "grid-cols-1 lg:grid-cols-2" : "grid-cols-1"} mt-4 gap-4`}>
         {project.images.map((image) => (
-          <Image
-            src={image}
-            alt={project.name}
-            width={800}
-            height={800}
-            class="rounded-lg"
-          />
+          <Image src={image} alt={project.name} width={800} height={800} class="rounded-lg" />
         ))}
       </div>
     )
@@ -114,25 +100,14 @@ const { project } = Astro.props;
           <article>
             {project.url && (
               <div class="mb-4 flex flex-wrap items-center justify-between gap-4 rounded-lg p-2 pl-4 ring-1 ring-neutral-800">
-                <h3 class="font-bold text-neutral-100">{project.client}</h3>
-                <Button
-                  icon
-                  href={project.url}
-                  color="btn-primary"
-                  openInNewTab
-                >
+                <h3 class="">{project.client}</h3>
+                <Button icon href={project.url} color="btn-primary" openInNewTab>
                   <PublicIcon slot="icon" />
                   Ir al sitio web
                 </Button>
               </div>
             )}
-            <Image
-              src={project.image}
-              alt=""
-              width={1200}
-              height={900}
-              class="rounded-lg"
-            />
+            <Image src={project.image} alt="" width={1200} height={900} class="rounded-lg" />
           </article>
         ))}
       </div>

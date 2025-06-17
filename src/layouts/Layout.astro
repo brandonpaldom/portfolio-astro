@@ -32,23 +32,12 @@ const { title, subtitle, description } = Astro.props;
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      is:inline
-      src="https://analytics.ahrefs.com/analytics.js"
-      data-key="kJyOJz23V2iAZRK0zOQtTA"
-      async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="kJyOJz23V2iAZRK0zOQtTA" async></script>
   </head>
-  <body
-    class="bg-neutral-900 text-neutral-400 antialiased selection:bg-indigo-500 selection:text-white"
-  >
+  <body>
     <Background />
-    <div
-      class="mx-auto flex max-w-[480px] flex-col justify-center gap-4 px-4 pt-6 md:max-w-screen-xl md:flex-row"
-    >
+    <div class="mx-auto flex max-w-[480px] flex-col justify-center gap-4 px-4 pt-6 md:max-w-screen-xl md:flex-row">
       <aside>
         <div class="flex shrink-0 flex-col gap-4 md:sticky md:top-6 md:w-80">
           <Profile />
@@ -58,7 +47,7 @@ const { title, subtitle, description } = Astro.props;
       <main class="flex grow flex-col gap-4">
         <Navbar />
         <section class="card flex flex-col p-6">
-          <h2 class="heading1 font-bold text-neutral-100">{subtitle}</h2>
+          <h2 class="heading1">{subtitle}</h2>
           <slot />
         </section>
         <Footer />

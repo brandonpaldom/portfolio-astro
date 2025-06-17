@@ -16,14 +16,7 @@ interface Props {
   heroImage?: string;
 }
 
-const {
-  title,
-  description,
-  pubDate,
-  author = "Brandon Palmeros",
-  tags = [],
-  heroImage,
-} = Astro.props;
+const { title, description, pubDate, author = "Brandon Palmeros", tags = [], heroImage } = Astro.props;
 
 const formattedDate = new Intl.DateTimeFormat("es-ES", {
   year: "numeric",
@@ -48,23 +41,12 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
     {heroImage && <meta property="og:image" content={heroImage} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      is:inline
-      src="https://analytics.ahrefs.com/analytics.js"
-      data-key="kJyOJz23V2iAZRK0zOQtTA"
-      async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="kJyOJz23V2iAZRK0zOQtTA" async></script>
   </head>
-  <body
-    class="bg-neutral-900 text-neutral-400 antialiased selection:bg-indigo-500 selection:text-white"
-  >
+  <body>
     <Background />
-    <div
-      class="mx-auto flex max-w-[480px] flex-col justify-center gap-4 px-4 pt-6 md:max-w-screen-xl md:flex-row"
-    >
+    <div class="mx-auto flex max-w-[480px] flex-col justify-center gap-4 px-4 pt-6 md:max-w-screen-xl md:flex-row">
       <aside>
         <div class="flex shrink-0 flex-col gap-4 md:sticky md:top-6 md:w-80">
           <Profile />
@@ -73,30 +55,16 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
       </aside>
       <main class="flex grow flex-col gap-4">
         <Navbar />
-        <article class="card flex flex-col p-6">
-          {
-            heroImage && (
-              <img
-                src={heroImage}
-                alt={title}
-                class="mb-6 h-64 w-full rounded-lg object-cover"
-              />
-            )
-          }
-
-          <header class="mb-6">
-            <h1 class="heading1 mb-4 font-bold text-neutral-100">{title}</h1>
-
-            <div
-              class="mb-4 flex flex-wrap items-center gap-4 text-sm text-neutral-400"
-            >
+        <article class="card flex flex-col gap-6 p-6">
+          <header class="flex flex-col gap-2">
+            <h1 class="heading1">{title}</h1>
+            <div class="flex flex-wrap items-center gap-2 text-sm">
               <time datetime={pubDate.toISOString()}>
                 {formattedDate}
               </time>
               <span>•</span>
               <span>Por {author}</span>
             </div>
-
             {
               tags.length > 0 && (
                 <div class="flex flex-wrap gap-2">
@@ -107,7 +75,7 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
               )
             }
           </header>
-
+          {heroImage && <img src={heroImage} alt={title} class="h-64 w-full rounded-lg object-cover" />}
           <div class="prose prose-neutral dark:prose-invert max-w-none">
             <slot />
           </div>

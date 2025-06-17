@@ -18,10 +18,7 @@ const { skills, reverse = false } = Astro.props;
   <div class="scroll carousel-track flex shrink-0 flex-nowrap gap-2 px-0 py-2">
     {skills.map((skill) => <Chip label={skill} color="chip-secondary" />)}
   </div>
-  <div
-    class="scroll carousel-track flex shrink-0 flex-nowrap gap-2 px-0 py-2"
-    aria-hidden="true"
-  >
+  <div class="scroll carousel-track flex shrink-0 flex-nowrap gap-2 px-0 py-2" aria-hidden="true">
     {skills.map((skill) => <Chip label={skill} color="chip-secondary" />)}
   </div>
 </div>

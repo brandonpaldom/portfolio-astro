@@ -9,11 +9,7 @@ const allPosts = await getCollection("blog");
 // Sort posts by publication date (newest first)
 const sortedPosts = allPosts
   .filter((post) => post.data.pubDate)
-  .sort(
-    (a, b) =>
-      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
-  );
-
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 ---
 
 <Layout
@@ -21,29 +17,24 @@ const sortedPosts = allPosts
   subtitle="Blog"
   description="Artículos sobre desarrollo web frontend, JavaScript, React, Astro, y las últimas tendencias en tecnología web."
 >
-  <div class="mb-6">
-    <p class="leading-relaxed text-neutral-300">
-      Comparto mis experiencias, aprendizajes y reflexiones sobre el desarrollo
-      web frontend, las últimas tecnologías y mejores prácticas en la industria.
+  <div class="mt-4 mb-4">
+    <p>
+      Comparto mis experiencias, aprendizajes y reflexiones sobre el desarrollo web frontend, las últimas tecnologías y
+      mejores prácticas en la industria.
     </p>
   </div>
-
-
+  <!-- TODO: Return value to 0 when blog posts are available -->
   {
     sortedPosts.length > 0 ? (
-      <div class="mt-6 grid gap-6">
+      <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
         {sortedPosts.map((post) => (
           <BlogCard post={post} />
         ))}
       </div>
     ) : (
       <div class="py-12 text-center">
-        <h3 class="heading3 mb-2 font-semibold text-neutral-100">
-          Próximamente...
-        </h3>
-        <p class="text-neutral-400">
-          Estoy trabajando en contenido interesante para compartir contigo.
-        </p>
+        <h3 class="heading3 mb-2">Próximamente...</h3>
+        <p>Estoy trabajando en contenido interesante para compartir contigo.</p>
       </div>
     )
   }

@@ -3,27 +3,9 @@ const { pathname } = Astro.url;
 ---
 
 <nav class="card flex items-center gap-2 p-4">
-  <a
-    href="/"
-    class:list={[
-      "btn",
-      pathname === "/" || pathname.includes("projects")
-        ? "btn-primary"
-        : "btn-secondary",
-    ]}>Portafolio</a
+  <a href="/" class:list={["btn", pathname === "/" || pathname.includes("projects") ? "btn-primary" : "btn-secondary"]}
+    >Portafolio</a
   >
-  <a
-    href="/blog"
-    class:list={[
-      "btn",
-      pathname.includes("blog") ? "btn-primary" : "btn-secondary",
-    ]}>Blog</a
-  >
-  <a
-    href="/resume"
-    class:list={[
-      "btn",
-      pathname.includes("resume") ? "btn-primary" : "btn-secondary",
-    ]}>Currículum</a
-  >
+  <a href="/blog" class:list={["btn", pathname.includes("blog") ? "btn-primary" : "btn-secondary"]}>Blog</a>
+  <a href="/resume" class:list={["btn", pathname.includes("resume") ? "btn-primary" : "btn-secondary"]}>Currículum</a>
 </nav>

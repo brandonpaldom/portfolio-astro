@@ -5,27 +5,41 @@
   --font-sans: "Inter", sans-serif;
 }
 
+@layer base {
+  body {
+    @apply bg-neutral-900 text-neutral-300 antialiased selection:bg-indigo-500 selection:text-white;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-neutral-100;
+  }
+}
+
 @layer components {
   .btn {
-    @apply flex items-center gap-2 rounded-lg px-4 py-2 font-semibold transition-colors duration-300;
+    @apply flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-white transition-colors duration-300;
   }
   .btn-icon {
-    @apply flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300;
+    @apply flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors duration-300;
   }
   .btn-primary {
-    @apply bg-indigo-400 text-neutral-900 shadow-sm hover:bg-indigo-500;
+    @apply bg-indigo-400 text-black shadow-sm hover:bg-indigo-500;
   }
   .btn-secondary {
-    @apply bg-neutral-800 text-neutral-100 shadow-sm hover:bg-neutral-700;
+    @apply bg-neutral-800 shadow-sm hover:bg-neutral-700;
   }
   .btn-ghost {
-    @apply bg-transparent text-neutral-100 hover:bg-neutral-800;
+    @apply bg-transparent hover:bg-neutral-800;
   }
   .card {
     @apply rounded-xl bg-neutral-900/70 shadow-lg ring-1 ring-neutral-800 backdrop-blur-md;
   }
   .chip {
-    @apply rounded-full px-3 py-1.5 text-xs font-medium shadow-sm ring-1;
+    @apply rounded-full px-3 py-1.5 text-xs font-semibold shadow-sm ring-1;
   }
   .chip-primary {
     @apply bg-lime-500/10 text-lime-300 ring-lime-500/20;
@@ -34,12 +48,12 @@
     @apply bg-neutral-500/10 text-neutral-100 ring-neutral-500/20;
   }
   .heading1 {
-    @apply text-[2rem] leading-[2.5rem] font-bold;
+    @apply text-4xl;
   }
   .heading2 {
-    @apply text-[1.75rem] leading-[2.25rem] font-bold;
+    @apply text-2xl;
   }
   .heading3 {
-    @apply text-[1.5rem] leading-[2rem] font-semibold;
+    @apply text-xl;
   }
 }

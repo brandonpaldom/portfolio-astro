@@ -12,15 +12,15 @@ import resume from "@data/resume.json";
   description="Estudió en la Universidad Euro Hispanoamericana. Estudió en la Universidad Veracruzana. Vive en Xalapa, Veracruz."
 >
   <section class="mt-4 flex flex-col gap-4">
-    <h2 class="heading2 font-bold text-neutral-100">Educación</h2>
+    <h2 class="heading2">Educación</h2>
     {resume.education.map((item) => <ResumeItem item={item} />)}
   </section>
   <section class="mt-4 flex flex-col gap-4">
-    <h2 class="heading2 font-bold text-neutral-100">Experiencia</h2>
+    <h2 class="heading2">Experiencia</h2>
     {resume.experience.map((item) => <ResumeItem item={item} />)}
   </section>
   <section class="mt-4 flex flex-col gap-4">
-    <h2 class="heading2 font-bold text-neutral-100">Certificaciones</h2>
+    <h2 class="heading2">Certificaciones</h2>
     {resume.certifications.map((item) => <ResumeItem item={item} />)}
   </section>
 </Layout>

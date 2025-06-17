@@ -14,12 +14,12 @@ const { title, description, variant = "default" } = Astro.props;
   class:list={[
     "flex items-start gap-4 rounded-lg border p-4 shadow-lg",
     variant === "default" && "border-neutral-800 bg-neutral-800",
-    variant === "error" && "border-red-500/15 bg-red-500/10 text-red-300",
+    variant === "error" && "border-red-500/15 bg-red-500/10",
   ]}
 >
   <TerminalIcon width="w-4" height="h-4" />
   <div>
-    <p class="font-semibold">{title}</p>
-    <p class="text-sm">{description}</p>
+    <p class="">{title}</p>
+    <p class="">{description}</p>
   </div>
 </div>
