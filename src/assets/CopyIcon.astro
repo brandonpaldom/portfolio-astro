@@ -1,0 +1,20 @@
+---
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+const { width = "w-5", height = "h-5" } = Astro.props;
+---
+
+<svg
+  class:list={[width, height, "fill-current"]}
+  stroke="currentColor"
+  fill="currentColor"
+  stroke-width="0"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+  ><path
+    d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H240c26.51 0 48-21.49 48-48V384h-48C213.5 384 192 362.5 192 336V352z"
+  ></path></svg
+>

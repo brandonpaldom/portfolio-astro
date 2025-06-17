@@ -1,0 +1,85 @@
+---
+import Button from "./Button.astro";
+import XIcon from "@assets/XIcon.astro";
+import LinkedInIcon from "@assets/LinkedInIcon.astro";
+import FacebookIcon from "@assets/FacebookIcon.astro";
+import CopyIcon from "@assets/CopyIcon.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+}
+
+const { title, description, url } = Astro.props;
+
+// Encode text for URLs
+const encodedTitle = encodeURIComponent(title);
+const encodedDescription = encodeURIComponent(description);
+const encodedUrl = encodeURIComponent(url);
+
+// Social sharing URLs
+const twitterUrl = `https://x.com/intent/post?text=${encodedTitle}&url=${encodedUrl}`;
+const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+---
+
+<div class="card flex flex-col gap-4 p-6">
+  <h3 class="font-bold">Compartir artículo</h3>
+
+  <div class="flex flex-col gap-3">
+    <Button href={twitterUrl} color="btn-blur" icon openInNewTab>
+      <XIcon slot="icon" />
+      Compartir en X
+    </Button>
+
+    <Button href={linkedinUrl} color="btn-blur" icon openInNewTab>
+      <LinkedInIcon slot="icon" />
+      Compartir en LinkedIn
+    </Button>
+
+    <Button href={facebookUrl} color="btn-blur" icon openInNewTab>
+      <FacebookIcon slot="icon" />
+      Compartir en Facebook
+    </Button>
+
+    <button id="copy-link-btn" class="btn btn-blur flex items-center gap-2" data-url={url}>
+      <div class="-ml-1.5">
+        <CopyIcon />
+      </div>
+      <span>Copiar enlace</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const copyBtn = document.getElementById("copy-link-btn");
+
+    if (copyBtn) {
+      copyBtn.addEventListener("click", async function () {
+        const url = this.getAttribute("data-url");
+        const span = this.querySelector("span");
+        const originalText = span?.textContent ?? "";
+
+        try {
+          await navigator.clipboard.writeText(url || "");
+          if (span) {
+            span.textContent = "¡Enlace copiado!";
+            setTimeout(() => {
+              span.textContent = originalText;
+            }, 2000);
+          }
+        } catch (err) {
+          console.error("Error copying to clipboard:", err);
+          if (span) {
+            span.textContent = "Error al copiar";
+            setTimeout(() => {
+              span.textContent = originalText;
+            }, 2000);
+          }
+        }
+      });
+    }
+  });
+</script>
