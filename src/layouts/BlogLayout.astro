@@ -6,6 +6,7 @@ import Profile from "@components/Profile.astro";
 import SocialShare from "@components/SocialShare.astro";
 import Navbar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
+import CopyIcon from "@assets/CopyIcon.astro";
 
 interface Props {
   title: string;
@@ -86,5 +87,59 @@ const currentUrl = Astro.url.href;
         <Footer />
       </main>
     </div>
+
+    <script>
+      // Add copy button to code blocks
+      document.addEventListener('DOMContentLoaded', () => {
+        const codeBlocks = document.querySelectorAll('pre');
+        
+        codeBlocks.forEach((codeBlock) => {
+          // Create wrapper for positioning
+          const wrapper = document.createElement('div');
+          wrapper.className = 'relative';
+          
+          // Create copy button
+          const copyButton = document.createElement('button');
+          copyButton.className = 'absolute top-2 right-2 p-1.5 rounded-md bg-neutral-700/50 hover:bg-neutral-600/70 transition-colors';
+          copyButton.innerHTML = `<span class="sr-only">Copy code</span>`;
+          copyButton.appendChild(document.createElementNS('http://www.w3.org/2000/svg', 'svg'));
+          
+          // Set SVG attributes
+          const svg = copyButton.querySelector('svg');
+          svg.setAttribute('class', 'w-4 h-4 fill-current');
+          svg.setAttribute('stroke', 'currentColor');
+          svg.setAttribute('fill', 'currentColor');
+          svg.setAttribute('stroke-width', '0');
+          svg.setAttribute('viewBox', '0 0 512 512');
+          svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+          
+          // Add SVG path
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('d', 'M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H240c26.51 0 48-21.49 48-48V384h-48C213.5 384 192 362.5 192 336V352z');
+          svg.appendChild(path);
+          
+          // Add click event to copy code
+          copyButton.addEventListener('click', () => {
+            const code = codeBlock.querySelector('code')?.textContent || '';
+            navigator.clipboard.writeText(code).then(() => {
+              // Visual feedback on copy
+              copyButton.classList.add('bg-green-500/50');
+              copyButton.classList.remove('bg-neutral-700/50', 'hover:bg-neutral-600/70');
+              
+              // Reset button after 2 seconds
+              setTimeout(() => {
+                copyButton.classList.remove('bg-green-500/50');
+                copyButton.classList.add('bg-neutral-700/50', 'hover:bg-neutral-600/70');
+              }, 2000);
+            });
+          });
+          
+          // Wrap the code block with our wrapper
+          codeBlock.parentNode.insertBefore(wrapper, codeBlock);
+          wrapper.appendChild(codeBlock);
+          wrapper.appendChild(copyButton);
+        });
+      });
+    </script>
   </body>
 </html>
