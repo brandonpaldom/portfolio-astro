@@ -39,7 +39,7 @@
     @apply bg-neutral-500/10 text-neutral-100 ring-neutral-500/20 hover:bg-neutral-500/20;
   }
   .card {
-    @apply rounded-xl bg-neutral-900/70 shadow-lg ring-1 ring-neutral-800 backdrop-blur-md;
+    @apply rounded-xl bg-neutral-900/70 shadow-lg ring-1 ring-neutral-800 backdrop-blur-[1px];
   }
   .chip {
     @apply rounded-full px-3 py-1.5 text-xs font-semibold shadow-sm ring-1;
@@ -48,7 +48,7 @@
     @apply bg-lime-500/10 text-lime-300 ring-lime-500/20;
   }
   .chip-secondary {
-    @apply bg-neutral-500/10 text-neutral-100 ring-neutral-500/20;
+    @apply bg-neutral-500/10 text-neutral-300 ring-neutral-500/20;
   }
   .heading1 {
     @apply text-4xl;
@@ -62,11 +62,9 @@
   .blog-content code {
     @apply rounded bg-neutral-800 px-1.5 py-0.5 font-mono text-sm text-neutral-200;
   }
-
   .blog-content pre {
     @apply relative my-4 overflow-x-auto rounded-lg bg-neutral-800 p-4;
   }
-
   .blog-content pre code {
     @apply bg-transparent p-0;
   }
