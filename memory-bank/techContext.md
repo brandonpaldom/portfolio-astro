@@ -1,37 +1,156 @@
 # Technical Context
 
-## Technologies Used
-- **Astro** (4.0+) for static site generation
-- **Tailwind CSS** (3.0+) for styling
-- **GitHub API** for project data integration
-- **TypeScript** for type safety
-- **Prettier** for code formatting
-- **Git** for version control
+## Technology Stack
 
-## Development Setup
-- Node.js 18+ with npm
-- Astro project structure with:
-  - Component-based architecture
-  - Data-driven pages via JSON files
-  - Public assets directory
-  - Tailwind CSS configuration
+### Core Technologies
+1. Astro Framework
+   - Static site generation
+   - Component-based architecture
+   - Partial hydration
+   - File-based routing
 
-## Technical Constraints
-- Static site generation only (no server-side rendering)
-- GitHub API rate limits for project data
-- Mobile-first responsive design requirements
-- Accessibility standards compliance (WCAG 2.1 AA)
+2. TypeScript
+   - Static typing
+   - Enhanced development experience
+   - Better code organization
+   - Type safety
+
+3. Tailwind CSS
+   - Utility-first CSS framework
+   - Responsive design
+   - Custom configuration
+   - PostCSS integration
+
+### Development Environment
+1. Build Tools
+   - Node.js
+   - npm package manager
+   - Astro CLI
+   - TypeScript compiler
+
+2. Development Tools
+   - VS Code
+   - Git version control
+   - ESLint
+   - Prettier code formatter
 
 ## Dependencies
-- Astro core packages
-- Tailwind CSS with PostCSS
-- GitHub API client libraries
-- Form validation libraries
-- Image optimization utilities
 
-## Tool Usage Patterns
-- Component development in src/components/
-- Data management in src/data/
-- Styling through Tailwind utility classes
-- Page routing via src/pages/
-- API integrations through src/lib/
+### Production Dependencies
+From package.json:
+```json
+{
+  "dependencies": {
+    "@astrojs/tailwind": "^5.0.0",
+    "astro": "^4.0.0",
+    "tailwindcss": "^3.0.24"
+  }
+}
+```
+
+### Development Dependencies
+```json
+{
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
+```
+
+## Project Structure
+```
+portfolio-astro/
+├── src/
+│   ├── assets/     # Icon components
+│   ├── components/ # Reusable UI components
+│   ├── content/    # Blog content
+│   ├── data/       # JSON data files
+│   ├── layouts/    # Page layouts
+│   ├── pages/      # Route pages
+│   └── styles/     # Global styles
+├── public/         # Static assets
+└── tests/          # Test files
+```
+
+## Technical Constraints
+
+### Performance
+- Static site generation for optimal loading
+- Image optimization requirements
+- First contentful paint optimization
+- Minimal JavaScript usage
+
+### Browser Support
+- Modern browsers
+- Progressive enhancement
+- Responsive design requirements
+
+### SEO Requirements
+- Meta tags optimization
+- Semantic HTML structure
+- Sitemap generation
+- Responsive images
+
+## Development Practices
+
+### Code Style
+1. TypeScript
+   - Strict mode enabled
+   - Consistent type definitions
+   - Interface-first approach
+
+2. Component Structure
+   - Single responsibility
+   - Props interface definitions
+   - Consistent naming conventions
+
+3. CSS/Tailwind
+   - Utility-first approach
+   - Custom theme configuration
+   - Responsive design patterns
+
+### Testing Strategy
+1. Unit Tests
+   - Component testing
+   - Content validation
+   - Type checking
+
+2. Build Validation
+   - Production build testing
+   - Static generation verification
+   - Link checking
+
+### Version Control
+1. Git Workflow
+   - Feature branch development
+   - Conventional commits
+   - Pull request workflow
+
+2. Asset Management
+   - Optimized image assets
+   - SVG icon components
+   - Public static files
+
+## Build and Deploy
+
+### Build Process
+1. Development
+   ```bash
+   npm run dev
+   ```
+
+2. Production
+   ```bash
+   npm run build
+   ```
+
+3. Preview
+   ```bash
+   npm run preview
+   ```
+
+### Deployment
+- Static site output
+- CDN-ready assets
+- Environment configuration
+- Build optimization
