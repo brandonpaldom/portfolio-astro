@@ -26,7 +26,10 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
 }).format(pubDate);
 
 // Get the current page URL for social sharing
-const currentUrl = Astro.url.href;
+// Use Astro.site for the base URL in production, fallback to Astro.url.origin in development
+const baseUrl = import.meta.env.PROD ? (Astro.site?.origin || Astro.url.origin) : Astro.url.origin;
+const currentPath = Astro.url.pathname;
+const currentUrl = new URL(currentPath, baseUrl).href;
 ---
 
 <!doctype html>

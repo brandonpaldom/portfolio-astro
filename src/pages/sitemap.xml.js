@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 
 export async function GET({ site }) {
-  const baseUrl = site || "https://brandonpalmeros.dev/";
+  const baseUrl = site ? site.toString() : "https://brandonpalmeros.dev/";
   // Get all blog posts
   const posts = await getCollection("blog");
 
