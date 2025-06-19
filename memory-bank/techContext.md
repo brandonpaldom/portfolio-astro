@@ -41,9 +41,9 @@ From package.json:
 ```json
 {
   "dependencies": {
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^4.0.0",
-    "tailwindcss": "^3.0.24"
+    "@tailwindcss/vite": "^4.1.10",
+    "astro": "^5.9.3",
+    "tailwindcss": "^4.1.10"
   }
 }
 ```
@@ -52,7 +52,11 @@ From package.json:
 ```json
 {
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "@tailwindcss/typography": "^0.5.16",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.12",
+    "vitest": "^3.2.3"
   }
 }
 ```
