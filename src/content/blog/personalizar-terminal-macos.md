@@ -1,7 +1,7 @@
 ---
 title: Personaliza tu Terminal de macOS con Oh My Posh (zsh + Homebrew)
 description: Aprende a personalizar tu terminal de macOS con Oh My Posh, zsh y Homebrew. Mejora tu experiencia de línea de comandos con temas y plugins.
-pubDate: 2025-06-17
+pubDate: 2025-06-20
 author: Brandon Palmeros
 heroImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1750287925/portfolio/blog/blog-cover-1.png"
 ---
