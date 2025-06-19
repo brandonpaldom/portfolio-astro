@@ -1,9 +1,13 @@
 import { describe, it, expect } from "vitest";
-import projects from "../src/data/projects.json";
+import fs from "fs";
+import path from "path";
 
-describe("projects.json", () => {
+describe("projects markdown files", () => {
   it("should have unique slugs", () => {
-    const slugs = projects.map((project) => project.slug);
+    const projectsDir = path.join(process.cwd(), "src/content/projects");
+    const projectFiles = fs.readdirSync(projectsDir).filter(file => file.endsWith(".md"));
+    
+    const slugs = projectFiles.map(file => file.replace(".md", ""));
     const uniqueSlugs = new Set(slugs);
 
     expect(slugs.length).toBe(uniqueSlugs.size);

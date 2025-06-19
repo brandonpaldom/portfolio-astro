@@ -1,9 +1,13 @@
 ---
 import Layout from "@layouts/Layout.astro";
-
 import ProjectCard from "@components/ProjectCard.astro";
+import { getCollection } from "astro:content";
 
-import projects from "@data/projects.json";
+// Get all projects
+const allProjects = await getCollection("projects");
+
+// Sort projects by id (ascending order)
+const sortedProjects = allProjects.sort((a, b) => a.data.id - b.data.id);
 ---
 
 <Layout
@@ -12,6 +16,6 @@ import projects from "@data/projects.json";
   description="Desarrollador web frontend en Xalapa, Veracruz. Especializado en desarrollo web a medida con Next.js y Astro. Diseño web responsive y optimización SEO. ¡Contáctame!"
 >
   <div class="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
-    {projects.map((project) => <ProjectCard project={project} />)}
+    {sortedProjects.map((project) => <ProjectCard project={project} />)}
   </div>
 </Layout>

@@ -2,48 +2,28 @@
 import Layout from "@layouts/Layout.astro";
 
 import Alert from "@components/Alert.astro";
-import Button from "@components/Button.astro";
+import BackToTop from "@components/BackToTop.astro";
 import Chip from "@components/Chip.astro";
 
-import projects from "@data/projects.json";
-
-import GitHubIcon from "@assets/GitHubIcon.astro";
-import PublicIcon from "@assets/PublicIcon.astro";
 import { Image } from "astro:assets";
-import BackToTop from "@components/BackToTop.astro";
-
-interface Props {
-  project: {
-    name: string;
-    description: string;
-    tags: string[];
-    url: string;
-    github: string;
-    images: string[];
-    squareImage: boolean;
-    projects: {
-      client: string;
-      url: string;
-      image: string;
-    }[];
-    development: boolean;
-    offline: boolean;
-  };
-}
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  return projects.map((project) => ({
-    params: { slug: project.slug },
-    props: { project },
+  const projectEntries = await getCollection("projects");
+  return projectEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
   }));
 }
 
-const { project } = Astro.props;
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const project = entry.data;
 ---
 
 <Layout
-  title={project.name}
-  subtitle={project.name}
+  title={project.title}
+  subtitle={project.title}
   description="Aquí encontrarás una selección de mis proyectos más destacados y una descripción de mi experiencia en el campo de la tecnología y el diseño web."
 >
   {
@@ -66,50 +46,16 @@ const { project } = Astro.props;
   <div class="mt-4 flex flex-wrap items-center gap-2">
     {project.tags.map((tag) => <Chip label={tag} />)}
   </div>
-  <p class="mt-4">{project.description}</p>
+  <div
+    class="prose prose-invert prose-neutral prose-img:rounded-lg prose-a:outline-offset-[3px] prose-a:decoration-indigo-500 mt-4 max-w-none"
+  >
+    <Content />
+  </div>
   {
-    project.url || project.github ? (
-      <div class="mt-4 flex flex-wrap gap-2">
-        {project.url && (
-          <Button icon href={project.url} openInNewTab>
-            <PublicIcon slot="icon" />
-            Ver proyecto
-          </Button>
-        )}
-        {project.github && (
-          <Button icon href={project.github} color="btn-secondary" openInNewTab>
-            <GitHubIcon slot="icon" />
-            Ver código
-          </Button>
-        )}
-      </div>
-    ) : null
-  }
-  {
-    project.images && (
-      <div class={`grid ${project.squareImage ? "grid-cols-1 lg:grid-cols-2" : "grid-cols-1"} mt-4 gap-4`}>
+    project.images && project.squareImage && (
+      <div class="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
         {project.images.map((image) => (
-          <Image src={image} alt={project.name} width={800} height={800} class="rounded-lg" />
-        ))}
-      </div>
-    )
-  }
-  {
-    project.projects && (
-      <div class="mt-4 grid grid-cols-1 gap-6">
-        {project.projects.map((project) => (
-          <article>
-            {project.url && (
-              <div class="mb-4 flex flex-wrap items-center justify-between gap-4 rounded-lg p-2 pl-4 ring-1 ring-neutral-800">
-                <h3 class="">{project.client}</h3>
-                <Button icon href={project.url} color="btn-primary" openInNewTab>
-                  <PublicIcon slot="icon" />
-                  Ir al sitio web
-                </Button>
-              </div>
-            )}
-            <Image src={project.image} alt="" width={1200} height={900} class="rounded-lg" />
-          </article>
+          <Image src={image} alt={project.title} width={800} height={800} class="rounded-lg" />
         ))}
       </div>
     )
