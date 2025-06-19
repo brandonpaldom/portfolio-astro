@@ -78,8 +78,8 @@ const currentUrl = Astro.url.href;
               )
             }
           </header>
-          {heroImage && <img src={heroImage} alt={title} class="h-64 w-full rounded-lg object-cover" />}
-          <div class="prose prose-invert prose-neutral max-w-none">
+          {heroImage && <img src={heroImage} alt={title} class="w-full rounded-lg object-cover object-top" />}
+          <div class="prose prose-invert prose-neutral blog-content max-w-none">
             <slot />
           </div>
         </article>

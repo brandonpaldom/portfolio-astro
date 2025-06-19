@@ -27,7 +27,7 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
 
 <article class="card p-6 transition-all duration-300 hover:ring-1 hover:ring-neutral-700">
   <a href={`/blog/${post.slug}`} class="flex flex-col gap-4">
-    {heroImage && <img src={heroImage} alt={title} class="h-48 w-full rounded-lg object-cover" />}
+    {heroImage && <img src={heroImage} alt={title} class="h-48 w-full rounded-lg object-cover object-top" />}
     <header class="flex flex-col gap-2">
       <h2 class="heading3 line-clamp-2">
         {title}
