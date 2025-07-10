@@ -7,14 +7,6 @@ tags: ["Next.js", "Tailwind CSS", "Firebase", "Clerk"]
 client: "Cystore"
 url: "https://cystore.vercel.app/"
 github: "https://github.com/brandonpaldom/cystore"
-images:
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1703292853/portfolio/projects/cystore-ecommerce-1.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1703292852/portfolio/projects/cystore-ecommerce-2.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1703292851/portfolio/projects/cystore-ecommerce-3.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1703292850/portfolio/projects/cystore-ecommerce-4.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1703292849/portfolio/projects/cystore-ecommerce-5.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1703292849/portfolio/projects/cystore-ecommerce-6.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1703292848/portfolio/projects/cystore-ecommerce-7.jpg"
 ---
 
 Cystore es una tienda en línea de productos tecnológicos, desarrollada con Next.js, Tailwind CSS, Firebase y Clerk. Ofrece una experiencia de compra en línea moderna y completa para una amplia gama de productos tecnológicos, con un diseño limpio y elegante.

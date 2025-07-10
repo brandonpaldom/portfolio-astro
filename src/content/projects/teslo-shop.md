@@ -7,11 +7,6 @@ tags: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "Cloudin
 client: "Teslo Shop"
 url: "https://teslo-shop-bp.vercel.app/"
 github: "https://github.com/brandonpaldom/teslo-shop"
-images:
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-1.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-2.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-3.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-4.jpg"
 ---
 
 Teslo Shop es una tienda en línea moderna de ropa inspirada en Tesla, desarrollada con tecnologías de vanguardia como Next.js 15 (con Turbopack), React 19, TypeScript 5 y Tailwind CSS.

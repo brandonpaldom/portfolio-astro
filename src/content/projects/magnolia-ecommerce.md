@@ -7,12 +7,6 @@ tags: ["React", "Tailwind CSS", "Firebase"]
 client: "Magnolia"
 url: "https://magnolia-shop.netlify.app/"
 github: "https://github.com/brandonpaldom/ch-ecommerce-react"
-images:
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-1.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-2.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-3.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-4.jpg"
-  - "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-5.jpg"
 ---
 
 Magnolia es un sitio de comercio electrónico para la industria de la moda. Fue desarrollado con React, Tailwind CSS y Firebase.
@@ -32,3 +26,9 @@ Magnolia es un sitio de comercio electrónico para la industria de la moda. Fue 
 - Tailwind CSS para el diseño
 - Firebase para la base de datos y autenticación
 - Netlify para el despliegue
+
+![Magnolia Ecommerce](https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-1.jpg)
+![Magnolia Ecommerce](https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-2.jpg)
+![Magnolia Ecommerce](https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-3.jpg)
+![Magnolia Ecommerce](https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-4.jpg)
+![Magnolia Ecommerce](https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-5.jpg)
