@@ -3,5 +3,6 @@
   "overrides": [{ "files": "*.astro", "options": { "parser": "astro" } }],
   "singleAttributePerLine": false,
   "printWidth": 120,
-  "bracketSameLine": false
+  "bracketSameLine": false,
+  "tabWidth": 2
 }
