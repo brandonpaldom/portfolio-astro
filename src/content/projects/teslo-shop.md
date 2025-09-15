@@ -2,7 +2,7 @@
 id: 1
 title: "Teslo Shop"
 description: "Teslo Shop es una tienda en línea moderna de ropa inspirada en Tesla, desarrollada con tecnologías de vanguardia como Next.js 15 (con Turbopack), React 19, TypeScript 5 y Tailwind CSS. El proyecto utiliza Prisma ORM conectado a Neon Serverless PostgreSQL para una base de datos escalable y de alto rendimiento, complementado con Cloudinary para la gestión de imágenes."
-coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1741988217/portfolio/projects/teslo-shop-1.jpg"
+coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1757965054/portfolio/covers/screenshot_1x_postspark_2025-09-15_13-37-25.webp"
 tags: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "Cloudinary", "PayPal"]
 client: "Teslo Shop"
 url: "https://teslo-shop-bp.vercel.app/"
