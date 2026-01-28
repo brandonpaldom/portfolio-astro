@@ -1,7 +1,7 @@
 ---
 title: "CleanCommit: Genera mensajes de commit profesionales con IA en segundos"
 description: "Descubre CleanCommit, mi extensión para VS Code que genera mensajes de commit siguiendo la especificación Conventional Commits usando IA. Compatible con VS Code, Cursor, Windsurf y más."
-pubDate: 2025-01-28
+pubDate: 2026-01-28
 author: Brandon Palmeros
 tags: ["vscode", "extension", "git", "ia", "productividad", "conventional-commits"]
 heroImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1769643985/portfolio/blog/xNw4Xj9AT3GPB3olnKyF.jpg"
