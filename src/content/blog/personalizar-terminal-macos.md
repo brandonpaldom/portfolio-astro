@@ -3,7 +3,8 @@ title: Personaliza tu Terminal de macOS con Oh My Posh (zsh + Homebrew)
 description: Aprende a personalizar tu terminal de macOS con Oh My Posh, zsh y Homebrew. Mejora tu experiencia de línea de comandos con temas y plugins.
 pubDate: 2025-06-20
 author: Brandon Palmeros
-heroImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1757965551/portfolio/blog/screenshot_1x_postspark_2025-09-15_13-45-44.webp"
+tags: ["terminal", "macos", "zsh", "iterm2", "homebrew", "oh-my-posh", "git", "tutorial", "productividad", "vscode"]
+heroImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1769644080/portfolio/blog/c8e6t0wlGO4dj2BYYVrM.webp"
 ---
 
 La terminal predeterminada en macOS es funcional, pero ¿sabías que puedes darle un aspecto más atractivo y funcional usando herramientas avanzadas como Oh My Posh, Oh My Zsh e iTerm2? Estas herramientas te permiten personalizar fácilmente tu terminal con temas vistosos y útiles, mejorar la gestión de tu shell Zsh y optimizar la experiencia general del usuario.
