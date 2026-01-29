@@ -55,7 +55,7 @@ const currentUrl = new URL(currentPath, baseUrl).href;
     <Background />
     <div class="mx-auto flex max-w-[480px] flex-col justify-center gap-4 px-4 pt-6 md:max-w-screen-xl md:flex-row">
       <aside>
-        <div class="flex shrink-0 flex-col gap-4 md:sticky md:top-6 md:w-80">
+        <div class="flex shrink-0 flex-col gap-4 md:sticky md:top-6 md:w-80 will-change-transform [transform:translateZ(0)]">
           <Profile />
           <SocialShare title={title} description={description} url={currentUrl} />
         </div>
@@ -83,7 +83,7 @@ const currentUrl = new URL(currentPath, baseUrl).href;
             }
           </header>
           {heroImage && <img src={heroImage} alt={title} class="w-full rounded-lg object-cover object-top" />}
-          <div class="prose prose-invert prose-neutral blog-content max-w-none">
+          <div class="prose prose-invert prose-neutral blog-content max-w-none [content-visibility:auto] [contain-intrinsic-size:auto_500px]">
             <slot />
           </div>
         </article>
