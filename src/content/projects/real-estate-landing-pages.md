@@ -1,7 +1,7 @@
 ---
 id: 7
 title: "Real Estate Landing Pages"
-description: "Landing pages para diversas promociones inmobiliarias. Los sitios muestran los inmuebles y ofrecen información sobre sus características y servicios, para que los compradores potenciales puedan obtener más información e imaginarse viviendo allí."
+description: "Landing pages para promociones inmobiliarias. Diseñadas para mostrar inmuebles y convertir visitantes en compradores potenciales."
 coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1678916575/portfolio/projects/real-estate-landing-pages-1.jpg"
 tags: ["HTML", "CSS", "JavaScript", "WordPress", "Elementor"]
 offline: true
