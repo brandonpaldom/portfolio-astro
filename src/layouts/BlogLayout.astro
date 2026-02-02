@@ -30,6 +30,7 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
 const baseUrl = import.meta.env.PROD ? (Astro.site?.origin || Astro.url.origin) : Astro.url.origin;
 const currentPath = Astro.url.pathname;
 const currentUrl = new URL(currentPath, baseUrl).href;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -39,6 +40,7 @@ const currentUrl = new URL(currentPath, baseUrl).href;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title} | Blog | Brandon Palmeros</title>
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
