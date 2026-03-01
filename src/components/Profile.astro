@@ -1,5 +1,6 @@
 ---
 import Chip from "./Chip.astro";
+import EncryptedText from "@components/ui/EncryptedText.astro";
 
 import { MapPin, Mail, Github, Linkedin } from "@lucide/astro";
 
@@ -13,8 +14,8 @@ import contact from "@data/contact.json";
       <img src={profile.imageUrl} alt="Foto de perfil" class="h-14 w-14 rounded-full object-cover" />
     </div>
     <div class="flex flex-col">
-      <h1 class="text-2xl font-semibold tracking-tight text-neutral-100">{profile.name}</h1>
-      <p class="text-neutral-400">{profile.title}</p>
+      <EncryptedText as="h1" text={profile.name} className="text-2xl font-semibold tracking-tight text-neutral-100" />
+      <EncryptedText as="p" text={profile.title} className="text-neutral-400" />
     </div>
   </div>
 
