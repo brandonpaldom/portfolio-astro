@@ -6,13 +6,17 @@ interface Props {
   class?: string;
 }
 
-const { color = "chip-primary", icon, label, class: className } = Astro.props;
+const { color = "chip-secondary", icon, label, class: className } = Astro.props;
 ---
 
-<div class:list={["chip flex items-center", color, className]}>
+<div class:list={[
+  "flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ring-1 backdrop-blur-md",
+  color === "chip-primary" ? "bg-emerald-500/10 text-emerald-400 ring-emerald-500/20" : "bg-white/5 text-neutral-300 ring-white/10",
+  className
+]}>
   {
     icon && (
-      <span class="mr-2">
+      <span class="flex items-center justify-center">
         <slot />
       </span>
     )

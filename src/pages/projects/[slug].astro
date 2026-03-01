@@ -47,20 +47,20 @@ const project = entry.data;
     {project.tags.map((tag) => <Chip label={tag} />)}
   </div>
   <div
-    class="prose prose-invert prose-neutral prose-img:rounded-lg prose-a:outline-offset-[3px] prose-a:decoration-indigo-500 mt-4 max-w-none"
+    class="prose prose-invert prose-neutral prose-img:rounded-xl prose-img:ring-1 prose-img:ring-white/10 prose-a:outline-offset-[3px] prose-a:decoration-neutral-500 hover:prose-a:decoration-white mt-8 max-w-none"
   >
     <Content />
   </div>
   {
     project.images && project.squareImage && (
-      <div class="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
         {project.images.map((image) => (
-          <Image src={image} alt={project.title} width={800} height={800} class="rounded-lg" />
+          <Image src={image} alt={project.title} width={800} height={800} class="rounded-xl ring-1 ring-white/10" />
         ))}
       </div>
     )
   }
-  <div class="mt-4 flex justify-center">
+  <div class="mt-12 flex justify-center">
     <BackToTop />
   </div>
 </Layout>

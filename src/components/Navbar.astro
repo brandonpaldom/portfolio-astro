@@ -1,11 +1,30 @@
 ---
 const { pathname } = Astro.url;
+
+const navItems = [
+  { path: "/", label: "Portafolio", match: (p: string) => p === "/" || p.startsWith("/projects") },
+  { path: "/blog", label: "Blog", match: (p: string) => p.startsWith("/blog") },
+  { path: "/resume", label: "Currículum", match: (p: string) => p.startsWith("/resume") },
+];
 ---
 
-<nav class="card flex items-center gap-2 p-4">
-  <a href="/" class:list={["btn", pathname === "/" || pathname.includes("projects") ? "btn-primary" : "btn-secondary"]}
-    >Portafolio</a
-  >
-  <a href="/blog" class:list={["btn", pathname.includes("blog") ? "btn-primary" : "btn-secondary"]}>Blog</a>
-  <a href="/resume" class:list={["btn", pathname.includes("resume") ? "btn-primary" : "btn-secondary"]}>Currículum</a>
+<nav class="fixed top-6 left-1/2 z-50 -translate-x-1/2 px-2">
+  <div class="flex items-center gap-1 rounded-full bg-black/50 px-2 py-2 backdrop-blur-md ring-1 ring-white/10 shadow-lg shadow-black/50">
+    {
+      navItems.map(({ path, label, match }) => {
+        const isActive = match(pathname);
+        return (
+          <a
+            href={path}
+            class:list={[
+              "relative px-4 py-1.5 text-sm font-medium transition-colors duration-300 rounded-full",
+              isActive ? "text-neutral-100 bg-white/10" : "text-neutral-400 hover:text-neutral-200 hover:bg-white/5",
+            ]}
+          >
+            {label}
+          </a>
+        );
+      })
+    }
+  </div>
 </nav>

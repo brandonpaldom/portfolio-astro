@@ -1,5 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Profile from "@components/Profile.astro";
+import SkillCarousels from "@components/SkillCarousels.astro";
 import ProjectCard from "@components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
@@ -12,10 +14,19 @@ const sortedProjects = allProjects.sort((a, b) => a.data.id - b.data.id);
 
 <Layout
   title="Brandon Palmeros | Desarrollo Web en Veracruz"
-  subtitle="Portafolio"
   description="Diseño y desarrollo de sitios web profesionales en Veracruz. Páginas rápidas, responsive y optimizadas para SEO que ayudan a tu negocio a crecer. Conoce mi trabajo."
 >
-  <div class="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
-    {sortedProjects.map((project) => <ProjectCard project={project} />)}
+  <div class="flex flex-col gap-16">
+    <section class="flex flex-col gap-8">
+      <Profile />
+      <SkillCarousels />
+    </section>
+
+    <section class="flex flex-col gap-6">
+      <h2 class="text-xl font-medium tracking-tight text-neutral-100">Proyectos Destacados</h2>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {sortedProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </section>
   </div>
 </Layout>

@@ -11,16 +11,26 @@ import resume from "@data/resume.json";
   subtitle="Currículum"
   description="Conoce mi experiencia en desarrollo web, diseño UI/UX y marketing digital. Formación, certificaciones y proyectos destacados."
 >
-  <section class="mt-4 flex flex-col gap-4">
-    <h2 class="heading2">Educación</h2>
-    {resume.education.map((item) => <ResumeItem item={item} />)}
-  </section>
-  <section class="mt-4 flex flex-col gap-4">
-    <h2 class="heading2">Experiencia</h2>
-    {resume.experience.map((item) => <ResumeItem item={item} />)}
-  </section>
-  <section class="mt-4 flex flex-col gap-4">
-    <h2 class="heading2">Certificaciones</h2>
-    {resume.certifications.map((item) => <ResumeItem item={item} />)}
-  </section>
+  <div class="flex flex-col gap-12 mt-6">
+    <section class="flex flex-col gap-6">
+      <h2 class="text-xl font-medium tracking-tight text-neutral-100">Educación</h2>
+      <div class="flex flex-col gap-4">
+        {resume.education.map((item) => <ResumeItem item={item} />)}
+      </div>
+    </section>
+    
+    <section class="flex flex-col gap-6">
+      <h2 class="text-xl font-medium tracking-tight text-neutral-100">Experiencia</h2>
+      <div class="flex flex-col gap-4">
+        {resume.experience.map((item) => <ResumeItem item={item} />)}
+      </div>
+    </section>
+    
+    <section class="flex flex-col gap-6">
+      <h2 class="text-xl font-medium tracking-tight text-neutral-100">Certificaciones</h2>
+      <div class="flex flex-col gap-4">
+        {resume.certifications.map((item) => <ResumeItem item={item} />)}
+      </div>
+    </section>
+  </div>
 </Layout>

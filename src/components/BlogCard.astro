@@ -21,15 +21,19 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
 }).format(new Date(pubDate));
 ---
 
-<article class="card transition-all duration-300 hover:ring-1 hover:ring-neutral-700">
-  <a href={`/blog/${post.slug}`} class="flex flex-col">
-    {heroImage && <img src={heroImage} alt={title} class="rounded-t-lg" />}
-    <header class="flex flex-col gap-2 p-6">
-      <time datetime={new Date(pubDate).toISOString()} class="text-sm">
+<article class="group relative flex flex-col overflow-hidden rounded-2xl bg-neutral-900/30 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-neutral-900/50 hover:ring-white/20 hover:shadow-lg hover:shadow-black/50">
+  <a href={`/blog/${post.slug}`} class="flex flex-col h-full">
+    {heroImage && (
+      <div class="relative overflow-hidden aspect-[16/9]">
+        <img src={heroImage} alt={title} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110" />
+      </div>
+    )}
+    <header class="flex flex-col gap-3 p-5">
+      <time datetime={new Date(pubDate).toISOString()} class="text-xs text-neutral-500 font-medium tracking-wide uppercase">
         {formattedDate}
       </time>
-      <h2 class="heading3 line-clamp-2">{title}</h2>
-      <p class="line-clamp-3 text-neutral-400">
+      <h2 class="text-lg font-medium text-neutral-200 line-clamp-2 group-hover:text-white transition-colors duration-300">{title}</h2>
+      <p class="line-clamp-2 text-sm text-neutral-400">
         {description}
       </p>
     </header>

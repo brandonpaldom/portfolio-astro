@@ -2,11 +2,11 @@
 import SkillCarousel from "./SkillCarousel.astro";
 
 const coreSkills = ["HTML", "CSS", "JavaScript", "TypeScript"];
-const frontendSkills = ["React", "Next.js", "Astro", "Maizzle", "Tailwind CSS"];
+const frontendSkills = ["React", "Next.js", "Astro", "Tailwind CSS", "Figma"];
 const backendSkills = ["Node.js", "Express", "Prisma", "PostgreSQL", "MongoDB"];
 ---
 
-<div class="card relative flex flex-col overflow-hidden p-6">
+<div class="relative flex flex-col gap-1 overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
   <SkillCarousel skills={coreSkills} />
   <SkillCarousel skills={frontendSkills} reverse={true} />
   <SkillCarousel skills={backendSkills} />
