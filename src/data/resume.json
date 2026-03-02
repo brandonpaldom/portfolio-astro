@@ -2,14 +2,14 @@
   "education": [
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/ueh-logo.png",
-      "title": "Mercadotecnia",
+      "title": "Licenciatura en Mercadotecnia",
       "organization": "Universidad Euro Hispanoamericana",
       "start": "2022",
-      "end": "actualidad"
+      "end": "Presente"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/uv-logo.png",
-      "title": "Publicidad y Relaciones Públicas",
+      "title": "Licenciatura en Publicidad y Relaciones Públicas",
       "organization": "Universidad Veracruzana",
       "start": "2015",
       "end": "2019"
@@ -20,15 +20,15 @@
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1744127711/portfolio/profile/corebusiness-logo.png",
       "title": "Salesforce Developer Jr.",
       "organization": "Core Business",
-      "start": "abr 2025",
-      "end": "actualidad"
+      "start": "Abr 2025",
+      "end": "Presente"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1695438294/portfolio/profile/unitex-logo.png",
       "title": "Auxiliar de TI",
       "organization": "Universidad Técnica Superior de Xalapa",
-      "start": "ago 2023",
-      "end": "abr 2025",
+      "start": "Ago 2023",
+      "end": "Abr 2025",
       "roles": [
         {
           "title": "Profesor de Desarrollo de Sitios Web",
@@ -44,42 +44,42 @@
       "image": "",
       "title": "Diseñador UI/UX",
       "organization": "Hightek Desarrollo y Consultoría",
-      "start": "may 2023",
-      "end": "jun 2023"
+      "start": "May 2023",
+      "end": "Jun 2023"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/vreal-logo.png",
       "title": "Especialista en Marketing Digital",
       "organization": "Vreal",
-      "start": "jul 2020",
-      "end": "dic 2022"
+      "start": "Jul 2020",
+      "end": "Dic 2022"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/rtv-logo.png",
-      "title": "Editor de video (Servicio social)",
+      "title": "Editor de Video (Servicio social)",
       "organization": "Radiotelevisión de Veracruz",
-      "start": "ago 2019",
-      "end": "feb 2020"
+      "start": "Ago 2019",
+      "end": "Feb 2020"
     }
   ],
   "certifications": [
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/coderhouse-logo.png",
-      "title": "Curso de Next.js",
+      "title": "Desarrollo Web con Next.js",
       "organization": "Coderhouse",
-      "start": "dic 2023"
+      "start": "Dic 2023"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/coderhouse-logo.png",
-      "title": "Curso de React",
+      "title": "Desarrollo Web con React",
       "organization": "Coderhouse",
-      "start": "jun 2022"
+      "start": "Jun 2022"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/google-logo.png",
-      "title": "Conceptos Básicos del Marketing Digital",
+      "title": "Fundamentos de Marketing Digital",
       "organization": "Google",
-      "start": "ene 2020"
+      "start": "Ene 2020"
     }
   ]
 }
