@@ -45,24 +45,21 @@
       "title": "Diseñador UI/UX",
       "organization": "Hightek Desarrollo y Consultoría",
       "start": "may 2023",
-      "end": "jun 2023",
-      "summary": "Apoyo en el rediseño de interfaces de usuario, optimizando la experiencia en una plataforma web en fase de actualización. Además, diseñé plantillas de correo electrónico transaccionales y produje un video promocional dinámico para el relanzamiento exitoso de la plataforma."
+      "end": "jun 2023"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/vreal-logo.png",
       "title": "Especialista en Marketing Digital",
       "organization": "Vreal",
       "start": "jul 2020",
-      "end": "dic 2022",
-      "summary": "Experiencia en marketing digital en el sector inmobiliario, con habilidades en diseño gráfico, desarrollo de sitios web y landing pages, gestión de campañas publicitarias en redes sociales, uso de plataformas de automatización y gestión de clientes mediante herramientas de CRM."
+      "end": "dic 2022"
     },
     {
       "image": "https://res.cloudinary.com/dlomynswh/image/upload/v1678916762/portfolio/profile/rtv-logo.png",
       "title": "Editor de video (Servicio social)",
       "organization": "Radiotelevisión de Veracruz",
       "start": "ago 2019",
-      "end": "feb 2020",
-      "summary": "En RTV realicé mi servicio social, donde adquirí habilidades en edición de video, producción de contenido audiovisual y apoyo en diseño gráfico para redes sociales."
+      "end": "feb 2020"
     }
   ],
   "certifications": [
@@ -86,3 +83,4 @@
     }
   ]
 }
+
