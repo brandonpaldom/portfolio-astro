@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Productos Digitales & Web",
+    "tools": ["React", "Next.js", "Astro", "TypeScript", "Tailwind", "Vercel"]
+  },
+  {
+    "title": "Automatización & CRM",
+    "tools": ["Salesforce", "Apex", "Flows", "Firebase", "PostgreSQL"]
+  },
+  {
+    "title": "Estrategia de Marketing Digital",
+    "tools": ["SEO", "Analytics", "Email Marketing", "Funnels"]
+  },
+  {
+    "title": "Diseño de Experiencia (UX/UI)",
+    "tools": ["Figma", "Design Systems", "Prototipado"]
+  }
+]

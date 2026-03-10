@@ -1,7 +1,7 @@
 ---
 id: 2
 title: "Social Media Ads"
-description: "Una colección de anuncios para redes sociales que he diseñado para diferentes clientes de la industria inmobiliaria."
+description: "Diseño de campañas visuales para redes sociales en el sector inmobiliario. Estrategia de contenido orientada a generar leads y aumentar la visibilidad de desarrollos residenciales."
 coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/social-media-ads-cover.jpg"
 tags: ["Figma", "Photoshop", "Illustrator"]
 squareImage: true

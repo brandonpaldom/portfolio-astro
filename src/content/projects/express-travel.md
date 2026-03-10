@@ -1,7 +1,7 @@
 ---
 id: 6
 title: "Express Travel"
-description: "Rediseño UI/UX de un sitio web de viajes, optimizado para escritorio y móvil. Enfocado en mejorar la experiencia de búsqueda y reserva."
+description: "Rediseño UX/UI de plataforma de viajes. Investigación de usuarios, prototipado interactivo y diseño responsive enfocado en simplificar la búsqueda y reserva."
 coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1678916578/portfolio/projects/express-travel-1.jpg"
 tags: ["Figma"]
 ---

@@ -1,7 +1,7 @@
 ---
 id: 8
 title: "Sayab Juriquilla"
-description: "Branding, diseño y sitio web para un desarrollo inmobiliario de terrenos en Querétaro, México. Enfocado en facilitar la decisión de compra."
+description: "Branding integral y sitio web para un desarrollo de terrenos en Querétaro. Desde identidad de marca hasta estrategia de comunicación visual para posicionar el proyecto en el mercado."
 coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1678916576/portfolio/projects/sayab-juriquilla-cover.jpg"
 tags: ["Photoshop", "Illustrator", "InDesign", "WordPress"]
 ---

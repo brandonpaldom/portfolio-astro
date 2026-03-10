@@ -1,10 +1,9 @@
 ---
 id: 3
 title: "Cystore Ecommerce"
-description: "Tienda en línea de productos tecnológicos con diseño limpio y elegante. Desarrollada con Next.js, Tailwind CSS, Firebase y Clerk."
+description: "E-commerce de productos tecnológicos con autenticación de usuarios, catálogo filtrable por categoría y gestión de inventario en tiempo real."
 coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1703292853/portfolio/projects/cystore-ecommerce-1.jpg"
 tags: ["Next.js", "Tailwind CSS", "Firebase", "Clerk"]
-client: "Cystore"
 url: "https://cystore.vercel.app/"
 github: "https://github.com/brandonpaldom/cystore"
 ---

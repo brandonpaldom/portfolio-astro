@@ -1,10 +1,9 @@
 ---
 id: 4
 title: "Homely Real Estate Marketplace"
-description: "Homely es una plataforma para encontrar propiedades inmobiliarias. En este sitio podrás encontrar propiedad de tus sueños de forma fácil. Fue desarrollada con Next.js y Cloudinary."
+description: "Marketplace inmobiliario con búsqueda por ubicación y precio, fichas detalladas de propiedades y contacto directo con agentes."
 coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/homely-marketplace-1.jpg"
 tags: ["Next.js", "Cloudinary"]
-client: "Homely"
 url: "https://homely-marketplace.vercel.app/"
 github: "https://github.com/brandonpaldom/homely"
 ---

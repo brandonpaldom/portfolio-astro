@@ -7,22 +7,22 @@ import resume from "@data/resume.json";
 ---
 
 <Layout
-  title="Currículum | Brandon Palmeros - Desarrollo Web"
+  title="Currículum | Brandon Palmeros - Consultor Digital"
   subtitle="Currículum"
-  description="Conoce mi experiencia en desarrollo web, diseño UI/UX y marketing digital. Formación, certificaciones y proyectos destacados."
+  description="Experiencia en consultoría digital, desarrollo web, automatización CRM, diseño UI/UX y marketing digital. Formación, certificaciones y proyectos destacados."
 >
   <div class="flex flex-col gap-12 mt-6">
-    <section class="flex flex-col gap-6">
-      <h2 class="text-xl font-medium tracking-tight text-neutral-100">Educación</h2>
-      <div class="flex flex-col gap-4">
-        {resume.education.map((item) => <ResumeItem item={item} />)}
-      </div>
-    </section>
-    
     <section class="flex flex-col gap-6">
       <h2 class="text-xl font-medium tracking-tight text-neutral-100">Experiencia</h2>
       <div class="flex flex-col gap-4">
         {resume.experience.map((item) => <ResumeItem item={item} />)}
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-6">
+      <h2 class="text-xl font-medium tracking-tight text-neutral-100">Educación</h2>
+      <div class="flex flex-col gap-4">
+        {resume.education.map((item) => <ResumeItem item={item} />)}
       </div>
     </section>
     

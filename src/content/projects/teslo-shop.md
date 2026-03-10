@@ -1,10 +1,9 @@
 ---
 id: 1
 title: "Teslo Shop"
-description: "Tienda en línea moderna de ropa inspirada en Tesla. Desarrollada con Next.js 15, TypeScript, Tailwind CSS, PostgreSQL y Cloudinary."
+description: "Plataforma e-commerce con catálogo, carrito, pasarela de pagos con PayPal y panel de administración para gestión de productos, órdenes y usuarios."
 coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1757965054/portfolio/covers/screenshot_1x_postspark_2025-09-15_13-37-25.webp"
 tags: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "Cloudinary", "PayPal"]
-client: "Teslo Shop"
 url: "https://teslo-shop-bp.vercel.app/"
 github: "https://github.com/brandonpaldom/teslo-shop"
 ---

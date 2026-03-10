@@ -1,10 +1,9 @@
 ---
 id: 5
 title: "Magnolia Ecommerce"
-description: "Magnolia es un sitio de comercio electrónico para la industria de la moda. Fue desarrollado con React, Tailwind CSS y Firebase."
+description: "E-commerce de moda con catálogo, carrito de compras, proceso de pago y autenticación de usuarios."
 coverImage: "https://res.cloudinary.com/dlomynswh/image/upload/v1678916572/portfolio/projects/magnolia-ecommerce-2.jpg"
 tags: ["React", "Tailwind CSS", "Firebase"]
-client: "Magnolia"
 url: "https://magnolia-shop.netlify.app/"
 github: "https://github.com/brandonpaldom/ch-ecommerce-react"
 ---
