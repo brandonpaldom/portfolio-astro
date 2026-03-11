@@ -9,9 +9,10 @@ const { className = "", fill = "white" } = Astro.props;
 
 <svg
   class:list={[
-    "pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] opacity-0 animate-spotlight",
+    "pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%]",
     className,
   ]}
+  style="opacity: 1; transform: translate(50%, -40%) scale(1);"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 3787 2842"
   fill="none"
@@ -52,21 +53,3 @@ const { className = "", fill = "white" } = Astro.props;
   </defs>
 </svg>
 
-<style>
-  @keyframes spotlight {
-    0% {
-      opacity: 0;
-      transform: translate(72%, -62%) scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(50%, -40%) scale(1);
-    }
-  }
-
-  .animate-spotlight {
-    animation: spotlight 2.5s ease 0.5s 1 forwards;
-    opacity: 1;
-    transform: translate(50%, -40%) scale(1);
-  }
-</style>
