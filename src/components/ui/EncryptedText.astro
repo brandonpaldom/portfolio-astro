@@ -67,7 +67,7 @@ const id = `encrypted-text-${Math.random().toString(36).substring(2, 9)}`;
   }
 
   // Ejecutamos cuando el DOM esté listo
-  document.addEventListener("DOMContentLoaded", initEncryptedText);
+  document.addEventListener("astro:page-load", initEncryptedText);
   // Y también escuchamos los eventos de Astro si se usan View Transitions
   document.addEventListener("astro:page-load", initEncryptedText);
 </script>

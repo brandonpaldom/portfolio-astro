@@ -42,7 +42,7 @@ const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("astro:page-load", function () {
     const copyBtn = document.getElementById("copy-link-btn");
 
     if (copyBtn) {
