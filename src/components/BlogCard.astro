@@ -22,7 +22,7 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
 ---
 
 <article
-  class="group bg-theme-surface/30 ring-theme-contrast/10 hover:bg-theme-surface/50 hover:ring-theme-contrast/20 focus-within:ring-theme-contrast/40 relative flex flex-col overflow-hidden rounded-2xl ring-1 transition-all duration-300 focus-within:ring-2 hover:-translate-y-1 hover:shadow-lg hover:shadow-neutral-950/50"
+  class="group bg-theme-surface/30 ring-theme-contrast/10 hover:bg-theme-surface/60 hover:ring-theme-contrast/20 focus-within:bg-theme-surface/60 focus-within:ring-theme-contrast/40 relative flex flex-col overflow-hidden rounded-2xl ring-1 transition-[transform,background-color,box-shadow] duration-200 focus-within:ring-2 hover:-translate-y-0.5"
 >
   <a href={`/blog/${post.id}`} class="flex h-full flex-col outline-none">
     {
@@ -31,7 +31,7 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
           <img
             src={heroImage}
             alt={title}
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
+            class="h-full w-full object-cover transition-transform duration-300 group-focus-within:scale-[1.02] group-hover:scale-[1.02]"
           />
         </div>
       )
@@ -43,9 +43,7 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
       >
         {formattedDate}
       </time>
-      <h2
-        class="text-theme-primary group-hover:text-theme-primary line-clamp-2 text-lg font-medium transition-colors duration-300"
-      >
+      <h2 class="text-theme-primary line-clamp-2 text-lg font-medium">
         {title}
       </h2>
       <p class="text-theme-muted line-clamp-2 text-sm">
