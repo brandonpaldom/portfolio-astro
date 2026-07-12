@@ -129,7 +129,7 @@
     @apply text-theme-primary font-semibold;
   }
   .content-typeset a {
-    @apply text-theme-primary decoration-theme-subtle/60 hover:decoration-theme-primary underline underline-offset-4 transition-colors;
+    @apply text-theme-primary decoration-theme-subtle/60 hover:decoration-theme-primary focus-visible:ring-theme-contrast/40 focus-visible:ring-offset-page rounded-sm underline underline-offset-4 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
   .content-typeset ul,
   .content-typeset ol {
@@ -184,6 +184,9 @@
   }
 
   /* Interactive controls */
+  .focus-ring {
+    @apply focus-visible:ring-theme-contrast/40 focus-visible:ring-offset-page outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
   .btn {
     @apply focus-visible:ring-offset-page inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium ring-1 transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }

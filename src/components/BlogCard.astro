@@ -22,9 +22,9 @@ const formattedDate = new Intl.DateTimeFormat("es-ES", {
 ---
 
 <article
-  class="group bg-theme-surface/30 ring-theme-contrast/10 hover:bg-theme-surface/50 hover:ring-theme-contrast/20 relative flex flex-col overflow-hidden rounded-2xl ring-1 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-neutral-950/50"
+  class="group bg-theme-surface/30 ring-theme-contrast/10 hover:bg-theme-surface/50 hover:ring-theme-contrast/20 focus-within:ring-theme-contrast/40 relative flex flex-col overflow-hidden rounded-2xl ring-1 transition-all duration-300 focus-within:ring-2 hover:-translate-y-1 hover:shadow-lg hover:shadow-neutral-950/50"
 >
-  <a href={`/blog/${post.id}`} class="flex h-full flex-col">
+  <a href={`/blog/${post.id}`} class="flex h-full flex-col outline-none">
     {
       heroImage && (
         <div class="relative aspect-[16/9] overflow-hidden">

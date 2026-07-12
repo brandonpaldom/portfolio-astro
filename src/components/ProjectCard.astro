@@ -11,9 +11,9 @@ const { coverImage, title } = project.data;
 ---
 
 <article
-  class="group bg-theme-surface/30 border-theme-contrast/10 hover:bg-theme-surface/50 hover:border-theme-contrast/20 relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-neutral-950/50"
+  class="group bg-theme-surface/30 border-theme-contrast/10 hover:bg-theme-surface/50 hover:border-theme-contrast/20 focus-within:border-theme-contrast/40 focus-within:ring-theme-contrast/30 relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 focus-within:ring-2 hover:-translate-y-1 hover:shadow-lg hover:shadow-neutral-950/50"
 >
-  <a href={`/projects/${project.id}`} class="flex h-full flex-col">
+  <a href={`/projects/${project.id}`} class="flex h-full flex-col outline-none">
     <div class="relative aspect-[4/3] overflow-hidden">
       <Image
         src={coverImage}
