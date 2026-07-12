@@ -42,9 +42,7 @@ const project = entry.data;
   <div class="mt-4 flex flex-wrap items-center gap-2">
     {project.tags.map((tag) => <Chip label={tag} />)}
   </div>
-  <div
-    class="prose prose-neutral dark:prose-invert prose-img:rounded-xl prose-img:ring-1 prose-img:ring-theme-contrast/10 prose-a:outline-offset-[3px] prose-a:decoration-neutral-500 hover:prose-a:decoration-theme-contrast mt-8 max-w-none"
-  >
+  <div class="prose prose-neutral dark:prose-invert content-typeset mt-8 max-w-none">
     <Content />
   </div>
   {

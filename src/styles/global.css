@@ -97,21 +97,90 @@
 }
 
 @layer components {
-  /* Keeping only minimal overrides for blog content if needed */
-  .blog-content h1,
-  .blog-content h2,
-  .blog-content h3,
-  .blog-content h4 {
-    @apply font-display tracking-tight;
+  /* Long-form content shared by blog posts and project case studies. */
+  .content-typeset {
+    --content-flow-space: 1.25rem;
+    @apply text-theme-muted text-[15px] leading-[1.75];
   }
-  .blog-content code {
+  .content-typeset > * {
+    margin-block: 0;
+  }
+  .content-typeset > * + * {
+    margin-top: var(--content-flow-space);
+  }
+  .content-typeset h2,
+  .content-typeset h3,
+  .content-typeset h4 {
+    @apply font-display text-theme-primary scroll-mt-28 tracking-tight;
+  }
+  .content-typeset h2 {
+    @apply mt-12 mb-4 text-2xl font-semibold;
+  }
+  .content-typeset h3 {
+    @apply mt-9 mb-3 text-xl font-medium;
+  }
+  .content-typeset h4 {
+    @apply mt-7 mb-2 text-base font-medium;
+  }
+  .content-typeset > p:first-child {
+    @apply text-theme-secondary text-[1.0625rem] leading-8;
+  }
+  .content-typeset strong {
+    @apply text-theme-primary font-semibold;
+  }
+  .content-typeset a {
+    @apply text-theme-primary decoration-theme-subtle/60 hover:decoration-theme-primary underline underline-offset-4 transition-colors;
+  }
+  .content-typeset ul,
+  .content-typeset ol {
+    @apply space-y-2 pl-6;
+  }
+  .content-typeset li {
+    @apply ps-1.5;
+  }
+  .content-typeset li::marker {
+    @apply text-theme-subtle;
+  }
+  .content-typeset blockquote {
+    @apply border-theme-contrast/20 text-theme-secondary my-7 border-l-2 py-1 pl-5 font-normal not-italic;
+  }
+  .content-typeset blockquote p::before,
+  .content-typeset blockquote p::after {
+    content: none;
+  }
+  .content-typeset hr {
+    @apply border-theme-contrast/10 my-10;
+  }
+  .content-typeset img {
+    @apply ring-theme-contrast/10 my-8 rounded-xl ring-1;
+  }
+  .content-typeset table {
+    @apply my-8 block w-full overflow-x-auto text-sm;
+  }
+  .content-typeset thead {
+    @apply border-theme-contrast/20 border-b;
+  }
+  .content-typeset th {
+    @apply text-theme-primary px-3 py-3 text-left font-semibold;
+  }
+  .content-typeset td {
+    @apply border-theme-contrast/10 px-3 py-3 align-top;
+  }
+  .content-typeset tbody tr {
+    @apply border-theme-contrast/10 border-b last:border-0;
+  }
+  .content-typeset code {
     @apply bg-theme-surface text-theme-secondary ring-theme-contrast/10 rounded-md px-1.5 py-0.5 font-mono text-sm ring-1;
   }
-  .blog-content pre {
-    @apply bg-theme-surface/50 ring-theme-contrast/10 relative my-6 overflow-x-auto rounded-xl p-4 ring-1 backdrop-blur-sm;
+  .content-typeset :not(pre) > code::before,
+  .content-typeset :not(pre) > code::after {
+    content: none;
   }
-  .blog-content pre code {
-    @apply bg-transparent p-0 text-sm ring-0;
+  .content-typeset pre {
+    @apply bg-theme-surface/70 ring-theme-contrast/10 relative my-7 overflow-x-auto rounded-xl p-5 text-[0.875rem] leading-6 ring-1 backdrop-blur-sm;
+  }
+  .content-typeset pre code {
+    @apply bg-transparent p-0 text-[inherit] text-inherit ring-0;
   }
 
   /* Interactive controls */
