@@ -31,10 +31,10 @@ const { item } = Astro.props;
           alt={item.organization}
           width={48}
           height={48}
-          class="bg-theme-contrast/5 ring-theme-contrast/10 h-12 w-12 shrink-0 rounded-xl object-contain p-1 ring-1 transition-transform group-hover:scale-105"
+          class="resume-logo bg-theme-contrast/5 ring-theme-contrast/10 h-12 w-12 shrink-0 rounded-xl object-contain p-1 ring-1 transition-transform group-hover:scale-105"
         />
       ) : (
-        <div class="bg-theme-surface ring-theme-contrast/10 text-theme-muted font-display group-hover:text-theme-primary flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-medium uppercase ring-1 transition-transform group-hover:scale-105">
+        <div class="resume-logo bg-theme-surface ring-theme-contrast/10 text-theme-muted font-display group-hover:text-theme-primary flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-medium uppercase ring-1 transition-transform group-hover:scale-105">
           {item.organization.charAt(0)}
         </div>
       )
