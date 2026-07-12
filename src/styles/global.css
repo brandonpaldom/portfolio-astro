@@ -165,7 +165,7 @@
     @apply border-theme-contrast/10 my-10;
   }
   .content-typeset img {
-    @apply ring-theme-contrast/10 my-8 rounded-xl ring-1;
+    @apply bg-theme-surface ring-theme-contrast/10 my-8 h-auto w-full rounded-xl ring-1;
   }
   .content-typeset table {
     @apply my-8 block w-full overflow-x-auto text-sm;

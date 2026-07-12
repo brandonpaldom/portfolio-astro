@@ -108,7 +108,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
               <img
                 src={heroImage}
                 alt={title}
-                class="ring-theme-contrast/10 w-full rounded-2xl object-cover object-top ring-1"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+                class="bg-theme-surface ring-theme-contrast/10 aspect-video w-full rounded-2xl object-cover object-top ring-1"
               />
             )
           }

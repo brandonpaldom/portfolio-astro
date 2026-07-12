@@ -47,14 +47,16 @@ const project = entry.data;
   </div>
   {
     project.images && project.squareImage && (
-      <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {project.images.map((image) => (
+      <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2" aria-label={`Galería de ${project.title}`}>
+        {project.images.map((image, index) => (
           <Image
             src={image}
-            alt={project.title}
+            alt={`${project.title} — imagen ${index + 1}`}
             width={800}
             height={800}
-            class="ring-theme-contrast/10 rounded-xl ring-1"
+            loading="lazy"
+            decoding="async"
+            class="bg-theme-surface ring-theme-contrast/10 rounded-xl ring-1"
           />
         ))}
       </div>
