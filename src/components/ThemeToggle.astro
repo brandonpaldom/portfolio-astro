@@ -13,6 +13,15 @@ import { Moon, Sun } from "@lucide/astro";
 </button>
 
 <script>
+  const prefersDark = () => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  };
+
+  const applyTheme = (root = document.documentElement) => {
+    root.classList.toggle("dark", prefersDark());
+  };
+
   const setupThemeToggle = () => {
     document.querySelectorAll<HTMLButtonElement>(".theme-toggle").forEach((button) => {
       if (button.dataset.ready === "true") return;
@@ -36,6 +45,15 @@ import { Moon, Sun } from "@lucide/astro";
     });
   };
 
-  document.addEventListener("astro:page-load", setupThemeToggle);
+  document.addEventListener("astro:before-swap", (event) => {
+    applyTheme(event.newDocument.documentElement);
+  });
+
+  document.addEventListener("astro:page-load", () => {
+    applyTheme();
+    setupThemeToggle();
+  });
+
+  applyTheme();
   setupThemeToggle();
 </script>
