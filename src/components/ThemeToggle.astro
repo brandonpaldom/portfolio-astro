@@ -1,0 +1,41 @@
+---
+import { Moon, Sun } from "@lucide/astro";
+---
+
+<button
+  type="button"
+  class="theme-toggle bg-theme-contrast/5 text-theme-muted ring-theme-contrast/10 hover:bg-theme-contrast/10 hover:text-theme-primary flex h-8 w-8 shrink-0 items-center justify-center rounded-full ring-1 transition-all duration-300 sm:h-9 sm:w-9"
+  aria-label="Cambiar a tema claro"
+  title="Cambiar tema"
+>
+  <Sun class="theme-icon-light h-4 w-4" aria-hidden="true" />
+  <Moon class="theme-icon-dark hidden h-4 w-4" aria-hidden="true" />
+</button>
+
+<script>
+  const setupThemeToggle = () => {
+    document.querySelectorAll<HTMLButtonElement>(".theme-toggle").forEach((button) => {
+      if (button.dataset.ready === "true") return;
+      button.dataset.ready = "true";
+
+      const updateLabel = () => {
+        const dark = document.documentElement.classList.contains("dark");
+        button.setAttribute("aria-label", dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
+        button.setAttribute("aria-pressed", String(dark));
+        button.querySelector(".theme-icon-light")?.classList.toggle("hidden", !dark);
+        button.querySelector(".theme-icon-dark")?.classList.toggle("hidden", dark);
+      };
+
+      updateLabel();
+      button.addEventListener("click", () => {
+        const nextTheme = document.documentElement.classList.contains("dark") ? "light" : "dark";
+        document.documentElement.classList.toggle("dark", nextTheme === "dark");
+        localStorage.setItem("theme", nextTheme);
+        updateLabel();
+      });
+    });
+  };
+
+  document.addEventListener("astro:page-load", setupThemeToggle);
+  setupThemeToggle();
+</script>

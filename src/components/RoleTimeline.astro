@@ -7,20 +7,20 @@ interface Role {
 const { roles } = Astro.props as { roles: Role[] };
 ---
 
-<div class="relative flex flex-col gap-5 mt-2 ml-4">
+<div class="relative mt-2 ml-4 flex flex-col gap-5">
   <div class="absolute inset-0 -z-10 mt-3 mb-2 flex w-8 items-center justify-center">
-    <span class="absolute h-full w-px bg-white/10"></span>
+    <span class="bg-theme-contrast/10 absolute h-full w-px"></span>
   </div>
   {
     roles.map((role) => (
       <div class="flex flex-col gap-1">
         <div class="grid grid-cols-[2rem_1fr] items-start gap-4">
-          <div class="flex h-6 items-center justify-center bg-black py-1">
-            <div class="h-2 w-2 rounded-full bg-neutral-600 ring-4 ring-black" />
+          <div class="bg-page flex h-6 items-center justify-center py-1">
+            <div class="ring-page h-2 w-2 rounded-full bg-neutral-600 ring-4" />
           </div>
           <div class="flex flex-col pt-0.5">
-            <h3 class="text-sm font-medium text-neutral-300">{role.title}</h3>
-            {role.modality && <span class="text-xs text-neutral-500">{role.modality}</span>}
+            <h3 class="text-theme-secondary text-sm font-medium">{role.title}</h3>
+            {role.modality && <span class="text-theme-subtle text-xs">{role.modality}</span>}
           </div>
         </div>
       </div>

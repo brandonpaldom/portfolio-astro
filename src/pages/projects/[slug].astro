@@ -21,11 +21,7 @@ const { Content } = await render(entry);
 const project = entry.data;
 ---
 
-<Layout
-  title={`${project.title} | Brandon Palmeros`}
-  subtitle={project.title}
-  description={project.description}
->
+<Layout title={`${project.title} | Brandon Palmeros`} subtitle={project.title} description={project.description}>
   {
     project.development && (
       <div class="mt-4">
@@ -47,7 +43,7 @@ const project = entry.data;
     {project.tags.map((tag) => <Chip label={tag} />)}
   </div>
   <div
-    class="prose prose-invert prose-neutral prose-img:rounded-xl prose-img:ring-1 prose-img:ring-white/10 prose-a:outline-offset-[3px] prose-a:decoration-neutral-500 hover:prose-a:decoration-white mt-8 max-w-none"
+    class="prose prose-neutral dark:prose-invert prose-img:rounded-xl prose-img:ring-1 prose-img:ring-theme-contrast/10 prose-a:outline-offset-[3px] prose-a:decoration-neutral-500 hover:prose-a:decoration-theme-contrast mt-8 max-w-none"
   >
     <Content />
   </div>
@@ -55,7 +51,13 @@ const project = entry.data;
     project.images && project.squareImage && (
       <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
         {project.images.map((image) => (
-          <Image src={image} alt={project.title} width={800} height={800} class="rounded-xl ring-1 ring-white/10" />
+          <Image
+            src={image}
+            alt={project.title}
+            width={800}
+            height={800}
+            class="ring-theme-contrast/10 rounded-xl ring-1"
+          />
         ))}
       </div>
     )

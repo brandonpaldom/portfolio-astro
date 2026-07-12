@@ -17,9 +17,10 @@ const sortedPosts = allPosts
   subtitle="Blog"
   description="Ideas, aprendizajes y reflexiones sobre tecnología, automatización, marketing digital y cómo resolver problemas reales de negocio."
 >
-  <div class="mt-4 mb-8 max-w-2xl text-neutral-400 leading-relaxed">
+  <div class="text-theme-muted mt-4 mb-8 max-w-2xl leading-relaxed">
     <p>
-      Comparto ideas, aprendizajes y reflexiones sobre tecnología, automatización, marketing digital y cómo usar la tecnología para resolver problemas reales de negocio.
+      Comparto ideas, aprendizajes y reflexiones sobre tecnología, automatización, marketing digital y cómo usar la
+      tecnología para resolver problemas reales de negocio.
     </p>
   </div>
   {
@@ -30,9 +31,9 @@ const sortedPosts = allPosts
         ))}
       </div>
     ) : (
-      <div class="py-12 text-center flex flex-col gap-2">
-        <h3 class="text-xl font-medium tracking-tight text-neutral-100">Próximamente...</h3>
-        <p class="text-neutral-500">Estoy trabajando en contenido interesante para compartir contigo.</p>
+      <div class="flex flex-col gap-2 py-12 text-center">
+        <h3 class="text-theme-primary text-xl font-medium tracking-tight">Próximamente...</h3>
+        <p class="text-theme-subtle">Estoy trabajando en contenido interesante para compartir contigo.</p>
       </div>
     )
   }

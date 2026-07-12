@@ -45,6 +45,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <link rel="canonical" href={canonicalURL} />
     <title>{title} | Blog | Brandon Palmeros</title>
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem("theme");
+        const dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
     <ClientRouter />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -54,23 +61,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
     {heroImage && <meta property="og:image" content={heroImage} />}
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="kJyOJz23V2iAZRK0zOQtTA" async></script>
   </head>
-  <body class="bg-black text-neutral-400 font-sans antialiased selection:bg-neutral-800 selection:text-neutral-200">
-    <div class="fixed inset-0 z-[-1] bg-black"></div>
-    <div class="fixed inset-0 z-[-1] grid-bg pointer-events-none"></div>
-    
-    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none" >
-      <Spotlight className="-top-40 right-0 md:right-60 md:-top-20" fill="white" />
+  <body class="text-theme-muted selection:bg-theme-surface-strong selection:text-theme-primary font-sans antialiased">
+    <div class="bg-page fixed inset-0 z-[-1]"></div>
+    <div class="grid-bg pointer-events-none fixed inset-0 z-[-1]"></div>
+
+    <div class="pointer-events-none fixed inset-0 z-[-1] overflow-hidden">
+      <Spotlight className="-top-40 right-0 md:-top-20 md:right-60" />
     </div>
 
-    <div class="noise-bg fixed inset-0 z-[-1] opacity-[0.04] pointer-events-none mix-blend-overlay"></div>
-    
-    <div class="mx-auto flex max-w-2xl flex-col px-6 py-12 md:py-20 min-h-screen">
+    <div class="noise-bg pointer-events-none fixed inset-0 z-[-1] opacity-[0.04] mix-blend-overlay"></div>
+
+    <div class="mx-auto flex min-h-screen max-w-2xl flex-col px-6 py-12 md:py-20">
       <Navbar />
-      <main class="flex grow flex-col gap-10 mt-16 mb-20">
+      <main class="mt-16 mb-20 flex grow flex-col gap-10">
         <article class="flex flex-col gap-10">
           <header class="flex flex-col gap-6">
-            <h1 class="text-3xl font-display font-semibold tracking-tight text-neutral-100">{title}</h1>
-            <div class="flex flex-wrap items-center gap-3 text-sm text-neutral-500">
+            <h1 class="font-display text-theme-primary text-3xl font-semibold tracking-tight">{title}</h1>
+            <div class="text-theme-subtle flex flex-wrap items-center gap-3 text-sm">
               <time datetime={pubDate.toISOString()}>
                 {formattedDate}
               </time>
@@ -81,19 +88,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
               tags.length > 0 && (
                 <div class="flex flex-wrap gap-2">
                   {tags.map((tag) => (
-                    <span class="rounded-full bg-white/5 px-2.5 py-1 text-xs font-medium text-neutral-300 ring-1 ring-white/10 backdrop-blur-md">{tag}</span>
+                    <span class="bg-theme-contrast/5 text-theme-secondary ring-theme-contrast/10 rounded-full px-2.5 py-1 text-xs font-medium ring-1 backdrop-blur-md">
+                      {tag}
+                    </span>
                   ))}
                 </div>
               )
             }
           </header>
-          {heroImage && <img src={heroImage} alt={title} class="w-full rounded-2xl ring-1 ring-white/10 object-cover object-top" />}
-          
-          <div class="prose prose-invert prose-neutral blog-content max-w-none prose-a:text-neutral-300 prose-a:decoration-neutral-600 hover:prose-a:decoration-white prose-img:rounded-xl prose-img:ring-1 prose-img:ring-white/10">
+          {
+            heroImage && (
+              <img
+                src={heroImage}
+                alt={title}
+                class="ring-theme-contrast/10 w-full rounded-2xl object-cover object-top ring-1"
+              />
+            )
+          }
+
+          <div
+            class="prose prose-neutral dark:prose-invert blog-content prose-a:text-theme-secondary prose-a:decoration-neutral-600 hover:prose-a:decoration-theme-contrast prose-img:rounded-xl prose-img:ring-1 prose-img:ring-theme-contrast/10 max-w-none"
+          >
             <slot />
           </div>
-          
-          <div class="mt-8 border-t border-white/10 pt-8">
+
+          <div class="border-theme-contrast/10 mt-8 border-t pt-8">
             <SocialShare title={title} description={description} url={currentUrl} />
           </div>
         </article>
@@ -111,14 +130,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
 
           const copyButton = document.createElement("button");
           copyButton.className =
-            "absolute top-3 right-3 p-2 rounded-lg bg-neutral-800/80 text-neutral-400 hover:text-white hover:bg-neutral-700/80 transition-all opacity-0 group-hover:opacity-100 ring-1 ring-white/10 backdrop-blur-sm cursor-pointer";
+            "absolute top-3 right-3 p-2 rounded-lg bg-theme-surface-strong/80 text-theme-muted hover:text-theme-primary hover:bg-theme-surface-strong/80 transition-all opacity-0 group-hover:opacity-100 ring-1 ring-theme-contrast/10 backdrop-blur-sm cursor-pointer";
           copyButton.innerHTML = `<span class="sr-only">Copy code</span>`;
           copyButton.appendChild(document.createElementNS("http://www.w3.org/2000/svg", "svg"));
 
           const tooltip = document.createElement("span");
           tooltip.textContent = "Copiado";
           tooltip.className =
-            'absolute -top-8 right-0 px-2 py-1 rounded bg-neutral-800 text-white text-xs font-medium opacity-0 transform translate-y-2 transition-all duration-300 ring-1 ring-white/20';
+            "absolute -top-8 right-0 px-2 py-1 rounded bg-theme-surface-strong text-theme-primary text-xs font-medium opacity-0 transform translate-y-2 transition-all duration-300 ring-1 ring-theme-contrast/20";
           copyButton.appendChild(tooltip);
 
           const svg = copyButton.querySelector("svg");
@@ -140,7 +159,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
             const code = codeBlock.querySelector("code")?.textContent || "";
             navigator.clipboard.writeText(code).then(() => {
               copyButton.classList.add("text-emerald-400");
-              
+
               const tooltip = copyButton.querySelector("span:not(.sr-only)");
               tooltip.classList.remove("opacity-0", "translate-y-2");
               tooltip.classList.add("opacity-100", "translate-y-0");
@@ -161,4 +180,3 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
     </script>
   </body>
 </html>
-
