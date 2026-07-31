@@ -22,47 +22,45 @@ const project = entry.data;
 ---
 
 <Layout title={`${project.title} | Brandon Palmeros`} subtitle={project.title} description={project.description}>
-  {
-    project.development && (
-      <div class="mt-4">
+  <div class="flex flex-col gap-6">
+    {
+      project.development && (
         <Alert
           title="En desarrollo"
           description="Este proyecto está en desarrollo. Es posible que algunas funciones no estén disponibles."
         />
-      </div>
-    )
-  }
-  {
-    project.offline && (
-      <div class="mt-4">
+      )
+    }
+    {
+      project.offline && (
         <Alert title="Fuera de línea" description="Este proyecto está actualmente fuera de línea." variant="error" />
-      </div>
-    )
-  }
-  <div class="mt-4 flex flex-wrap items-center gap-2">
-    {project.tags.map((tag) => <Chip label={tag} />)}
-  </div>
-  <div class="prose prose-neutral dark:prose-invert content-typeset mt-8 max-w-none">
-    <Content />
-  </div>
-  {
-    project.images && project.squareImage && (
-      <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2" aria-label={`Galería de ${project.title}`}>
-        {project.images.map((image, index) => (
-          <Image
-            src={image}
-            alt={`${project.title} — imagen ${index + 1}`}
-            width={800}
-            height={800}
-            loading="lazy"
-            decoding="async"
-            class="bg-theme-surface ring-theme-contrast/10 rounded-xl ring-1"
-          />
-        ))}
-      </div>
-    )
-  }
-  <div class="mt-12 flex justify-center">
-    <BackToTop />
+      )
+    }
+    <div class="flex flex-wrap items-center gap-2">
+      {project.tags.map((tag) => <Chip label={tag} />)}
+    </div>
+    <div class="prose prose-neutral dark:prose-invert content-typeset max-w-none">
+      <Content />
+    </div>
+    {
+      project.images && project.squareImage && (
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2" role="region" aria-label={`Galería de ${project.title}`}>
+          {project.images.map((image, index) => (
+            <Image
+              src={image}
+              alt={`${project.title} — imagen ${index + 1}`}
+              width={800}
+              height={800}
+              loading="lazy"
+              decoding="async"
+              class="bg-theme-surface ring-theme-contrast/10 rounded-xl ring-1"
+            />
+          ))}
+        </div>
+      )
+    }
+    <div class="flex justify-center">
+      <BackToTop />
+    </div>
   </div>
 </Layout>

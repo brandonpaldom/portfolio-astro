@@ -29,7 +29,9 @@ import { Moon, Sun } from "@lucide/astro";
 
       const updateLabel = () => {
         const dark = document.documentElement.classList.contains("dark");
-        button.setAttribute("aria-label", dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
+        const label = dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro";
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
         button.setAttribute("aria-pressed", String(dark));
         button.querySelector(".theme-icon-light")?.classList.toggle("hidden", !dark);
         button.querySelector(".theme-icon-dark")?.classList.toggle("hidden", dark);

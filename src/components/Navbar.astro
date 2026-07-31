@@ -10,7 +10,7 @@ const navItems = [
 ];
 ---
 
-<nav class="fixed top-6 left-1/2 z-50 -translate-x-1/2 px-2">
+<nav class="fixed top-6 left-1/2 z-50 -translate-x-1/2 px-2" aria-label="Navegación principal">
   <div
     class="bg-theme-surface/90 ring-theme-contrast/10 flex items-center gap-1 rounded-full px-2 py-2 shadow-lg ring-1 shadow-neutral-950/10 backdrop-blur-md dark:shadow-neutral-950/50"
   >
@@ -26,6 +26,7 @@ const navItems = [
                 ? "bg-neutral-50 text-neutral-900 shadow-sm ring-1 ring-neutral-950/5 dark:bg-neutral-800 dark:text-neutral-100 dark:ring-white/10"
                 : "text-theme-muted hover:bg-theme-contrast/5 hover:text-theme-primary",
             ]}
+            aria-current={isActive ? "page" : undefined}
           >
             {label}
           </a>

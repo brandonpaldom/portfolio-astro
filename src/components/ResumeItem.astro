@@ -47,7 +47,7 @@ const { item } = Astro.props;
         <span class="text-theme-secondary font-medium">
           {item.organization}
         </span>
-        <span class="mx-1.5 opacity-50">•</span>
+        <span class="mx-1.5 opacity-50" aria-hidden="true">•</span>
         <span class="capitalize">
           {item.start}
           {item.end && `— ${item.end}`}

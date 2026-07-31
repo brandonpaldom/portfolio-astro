@@ -52,7 +52,7 @@
 
 @layer base {
   body {
-    @apply text-theme-muted selection:bg-theme-surface-strong selection:text-theme-primary antialiased;
+    @apply text-theme-muted selection:bg-theme-surface-strong selection:text-theme-primary font-sans antialiased;
     background-color: var(--page-background);
     transition:
       background-color 200ms ease,
@@ -110,10 +110,34 @@
 }
 
 @layer components {
+  /* Shared page geometry and type scale. */
+  .page-shell {
+    @apply mx-auto flex min-h-screen max-w-2xl flex-col px-6 py-12 md:py-20;
+  }
+  .page-main {
+    @apply mt-16 mb-16 flex grow flex-col;
+  }
+  .page-header {
+    @apply mb-10 flex flex-col gap-3;
+  }
+  .page-title {
+    @apply font-display text-theme-primary text-3xl leading-tight font-semibold tracking-tight md:text-4xl;
+  }
+  .page-description {
+    @apply text-theme-muted max-w-xl text-[15px] leading-7;
+  }
+  .section-title {
+    @apply font-display text-theme-primary text-xl leading-snug font-medium tracking-tight;
+  }
+  .card-title {
+    @apply font-display text-theme-primary leading-snug font-medium tracking-tight;
+  }
+
   /* Long-form content shared by blog posts and project case studies. */
   .content-typeset {
     --content-flow-space: 1.25rem;
     @apply text-theme-muted text-[15px] leading-[1.75];
+    text-wrap: pretty;
   }
   .content-typeset > * {
     margin-block: 0;
