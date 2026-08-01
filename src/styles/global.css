@@ -14,6 +14,8 @@
   --color-theme-surface: var(--theme-surface);
   --color-theme-surface-strong: var(--theme-surface-strong);
   --color-theme-contrast: var(--theme-contrast);
+  --color-theme-card: var(--theme-card);
+  --color-theme-card-border: var(--theme-card-border);
   --color-status-success: var(--status-success);
   --color-status-error: var(--status-error);
   --color-page: var(--page-background);
@@ -29,6 +31,8 @@
   --theme-surface: var(--color-neutral-100);
   --theme-surface-strong: var(--color-neutral-200);
   --theme-contrast: var(--color-neutral-950);
+  --theme-card: var(--color-neutral-50);
+  --theme-card-border: var(--color-neutral-200);
   --status-success: var(--color-emerald-700);
   --status-error: var(--color-red-700);
   --spotlight-color: var(--theme-contrast);
@@ -45,6 +49,8 @@
   --theme-surface: var(--color-neutral-900);
   --theme-surface-strong: var(--color-neutral-800);
   --theme-contrast: var(--color-neutral-50);
+  --theme-card: var(--color-neutral-900);
+  --theme-card-border: var(--color-neutral-800);
   --status-success: var(--color-emerald-400);
   --status-error: var(--color-red-300);
   --grid-color: color-mix(in oklch, var(--theme-contrast) 5%, transparent);
