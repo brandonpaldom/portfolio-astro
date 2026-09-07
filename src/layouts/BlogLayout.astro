@@ -7,6 +7,7 @@ import "@fontsource/geist-mono/400.css";
 import "@fontsource/syne/500.css";
 import "@fontsource/syne/600.css";
 
+import Analytics from "@vercel/analytics/astro";
 import { ClientRouter } from "astro:transitions";
 import SocialShare from "@components/SocialShare.astro";
 import Navbar from "@components/Navbar.astro";
@@ -59,7 +60,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
     <meta property="article:published_time" content={pubDate.toISOString()} />
     <meta property="article:author" content={author} />
     {heroImage && <meta property="og:image" content={heroImage} />}
-    <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="kJyOJz23V2iAZRK0zOQtTA" async></script>
+    <Analytics />
   </head>
   <body class="text-theme-muted selection:bg-theme-surface-strong selection:text-theme-primary font-sans antialiased">
     <div class="bg-page fixed inset-0 z-[-1]"></div>
