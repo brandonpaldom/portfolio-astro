@@ -1,5 +1,5 @@
 ---
-interface Props {
+export interface Props {
   text: string;
   className?: string;
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div";
@@ -43,7 +43,7 @@ const { text, className = "", as: Element = "span" } = Astro.props;
         interval = window.setInterval(() => {
           el.textContent = targetText
             .split("")
-            .map((letter, index) => {
+            .map((_, index) => {
               // Si la iteración ya superó esta letra, mostramos la letra final
               if (index < iterations) {
                 return targetText[index];

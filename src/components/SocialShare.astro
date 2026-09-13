@@ -11,14 +11,12 @@ const iconPaths = {
 
 interface Props {
   title: string;
-  description: string;
   url: string;
 }
 
-const { title, description, url } = Astro.props;
+const { title, url } = Astro.props;
 
 const encodedTitle = encodeURIComponent(title);
-const encodedDescription = encodeURIComponent(description);
 const encodedUrl = encodeURIComponent(url);
 
 const twitterUrl = `https://x.com/intent/post?text=${encodedTitle}&url=${encodedUrl}`;

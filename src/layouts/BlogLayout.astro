@@ -79,7 +79,7 @@ const currentUrl = new URL(currentPath, baseUrl).href;
     </div>
 
     <div class="border-theme-contrast/10 mt-8 border-t pt-8">
-      <SocialShare title={title} description={description} url={currentUrl} />
+      <SocialShare title={title} url={currentUrl} />
     </div>
   </article>
 </Layout>
@@ -99,8 +99,8 @@ const currentUrl = new URL(currentPath, baseUrl).href;
       </button>`,
     );
 
-    const button = wrapper.querySelector("button");
-    const tooltip = button.querySelector("span");
+    const button = wrapper.querySelector<HTMLButtonElement>("button")!;
+    const tooltip = button.querySelector<HTMLSpanElement>("span")!;
 
     button.addEventListener("click", async () => {
       await navigator.clipboard.writeText(codeBlock.querySelector("code")?.textContent ?? "");
