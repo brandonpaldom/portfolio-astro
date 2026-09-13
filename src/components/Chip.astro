@@ -3,10 +3,9 @@ interface Props {
   icon?: boolean;
   color?: "chip-primary" | "chip-secondary";
   label: string;
-  class?: string;
 }
 
-const { color = "chip-secondary", icon, label, class: className } = Astro.props;
+const { color = "chip-secondary", icon, label } = Astro.props;
 ---
 
 <div
@@ -15,7 +14,6 @@ const { color = "chip-secondary", icon, label, class: className } = Astro.props;
     color === "chip-primary"
       ? "text-status-success bg-emerald-500/10 ring-emerald-500/20"
       : "bg-theme-surface text-theme-secondary ring-theme-contrast/10",
-    className,
   ]}
 >
   {

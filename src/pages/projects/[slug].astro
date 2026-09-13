@@ -43,7 +43,7 @@ const project = entry.data;
       <Content />
     </div>
     {
-      project.images && project.squareImage && (
+      project.images && (
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2" role="region" aria-label={`Galería de ${project.title}`}>
           {project.images.map((image, index) => (
             <Image

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import RoleTimeline from "./RoleTimeline.astro";
+import type { Role } from "./RoleTimeline.astro";
 
 interface Props {
   item: {
@@ -12,11 +13,6 @@ interface Props {
     end?: string;
     summary?: string;
   };
-}
-
-interface Role {
-  title: string;
-  modality?: string;
 }
 
 const { item } = Astro.props;

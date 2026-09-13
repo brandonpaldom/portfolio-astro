@@ -6,12 +6,9 @@ interface Props {
 }
 
 const { text, className = "", as: Element = "span" } = Astro.props;
-
-// Usamos un identificador único para poder tener múltiples textos encriptados en la misma página
-const id = `encrypted-text-${Math.random().toString(36).substring(2, 9)}`;
 ---
 
-<Element class:list={["encrypted-text", className]} data-text={text} id={id}>
+<Element class:list={["encrypted-text", className]} data-text={text}>
   {text}
 </Element>
 
