@@ -61,33 +61,31 @@ const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
 </div>
 
 <script>
-  document.addEventListener("astro:page-load", function () {
-    const copyBtn = document.getElementById("copy-link-btn");
+  const copyBtn = document.getElementById("copy-link-btn");
 
-    if (copyBtn) {
-      copyBtn.addEventListener("click", async function () {
-        const url = this.getAttribute("data-url");
-        const span = this.querySelector("span");
-        const originalText = span?.textContent ?? "";
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async function () {
+      const url = this.getAttribute("data-url");
+      const span = this.querySelector("span");
+      const originalText = span?.textContent ?? "";
 
-        try {
-          await navigator.clipboard.writeText(url || "");
-          if (span) {
-            span.textContent = "¡Copiado!";
-            setTimeout(() => {
-              span.textContent = originalText;
-            }, 2000);
-          }
-        } catch (err) {
-          console.error("Error copying to clipboard:", err);
-          if (span) {
-            span.textContent = "Error";
-            setTimeout(() => {
-              span.textContent = originalText;
-            }, 2000);
-          }
+      try {
+        await navigator.clipboard.writeText(url || "");
+        if (span) {
+          span.textContent = "¡Copiado!";
+          setTimeout(() => {
+            span.textContent = originalText;
+          }, 2000);
         }
-      });
-    }
-  });
+      } catch (err) {
+        console.error("Error copying to clipboard:", err);
+        if (span) {
+          span.textContent = "Error";
+          setTimeout(() => {
+            span.textContent = originalText;
+          }, 2000);
+        }
+      }
+    });
+  }
 </script>

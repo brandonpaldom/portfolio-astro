@@ -24,10 +24,6 @@ const id = `encrypted-text-${Math.random().toString(36).substring(2, 9)}`;
     const elements = document.querySelectorAll(".encrypted-text");
 
     elements.forEach((el) => {
-      // Evitamos ejecutar múltiples veces si ya se procesó
-      if (el.hasAttribute("data-processed")) return;
-      el.setAttribute("data-processed", "true");
-
       const targetText = el.getAttribute("data-text");
       if (!targetText) return;
 
@@ -71,7 +67,6 @@ const id = `encrypted-text-${Math.random().toString(36).substring(2, 9)}`;
     });
   }
 
-  // Ejecutamos después de la carga inicial y de las View Transitions de Astro.
-  document.addEventListener("astro:page-load", initEncryptedText);
+  // Ejecutamos después de la carga inicial.
   initEncryptedText();
 </script>

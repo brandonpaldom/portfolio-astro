@@ -24,9 +24,6 @@ import { Moon, Sun } from "@lucide/astro";
 
   const setupThemeToggle = () => {
     document.querySelectorAll<HTMLButtonElement>(".theme-toggle").forEach((button) => {
-      if (button.dataset.ready === "true") return;
-      button.dataset.ready = "true";
-
       const updateLabel = () => {
         const dark = document.documentElement.classList.contains("dark");
         const label = dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro";
@@ -46,15 +43,6 @@ import { Moon, Sun } from "@lucide/astro";
       });
     });
   };
-
-  document.addEventListener("astro:before-swap", (event) => {
-    applyTheme(event.newDocument.documentElement);
-  });
-
-  document.addEventListener("astro:page-load", () => {
-    applyTheme();
-    setupThemeToggle();
-  });
 
   applyTheme();
   setupThemeToggle();
