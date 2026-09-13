@@ -17,9 +17,19 @@ interface Props {
   title: string;
   subtitle?: string;
   description: string;
+  documentTitle?: string;
+  image?: string;
+  type?: "website" | "article";
 }
 
-const { title, subtitle, description } = Astro.props;
+const {
+  title,
+  subtitle,
+  description,
+  documentTitle = title,
+  image = "https://res.cloudinary.com/dlomynswh/image/upload/v1678916234/portfolio/og-image.png",
+  type = "website",
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
 ---
 
@@ -31,7 +41,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
     <meta name="description" content={description} />
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <link rel="canonical" href={canonicalURL} />
-    <title>{title}</title>
+    <title>{documentTitle}</title>
     <script is:inline>
       (() => {
         const saved = localStorage.getItem("theme");
@@ -40,23 +50,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
       })();
     </script>
     <ClientRouter />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:locale" content="es_MX" />
     <meta property="og:site_name" content="Brandon Palmeros" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta
-      property="og:image"
-      content="https://res.cloudinary.com/dlomynswh/image/upload/v1678916234/portfolio/og-image.png"
-    />
+    <meta property="og:image" content={image} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta
-      name="twitter:image"
-      content="https://res.cloudinary.com/dlomynswh/image/upload/v1678916234/portfolio/og-image.png"
-    />
+    <meta name="twitter:image" content={image} />
+    <slot name="head" />
     <Analytics />
   </head>
   <body class="text-theme-muted selection:bg-theme-surface-strong selection:text-theme-primary font-sans antialiased">
