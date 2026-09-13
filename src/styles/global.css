@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -177,6 +176,12 @@
   .content-typeset ul,
   .content-typeset ol {
     @apply space-y-2 pl-6;
+  }
+  .content-typeset ul {
+    @apply list-disc;
+  }
+  .content-typeset ol {
+    @apply list-decimal;
   }
   .content-typeset li {
     @apply ps-1.5;
