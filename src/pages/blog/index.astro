@@ -3,13 +3,9 @@ import Layout from "@layouts/Layout.astro";
 import BlogCard from "@components/BlogCard.astro";
 import { getCollection } from "astro:content";
 
-// Get all blog posts
+// Get all blog posts, newest first
 const allPosts = await getCollection("blog");
-
-// Sort posts by publication date (newest first)
-const sortedPosts = allPosts
-  .filter((post) => post.data.pubDate)
-  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <Layout
@@ -17,12 +13,6 @@ const sortedPosts = allPosts
   subtitle="Blog"
   description="Ideas, aprendizajes y reflexiones sobre tecnología, automatización, marketing digital y cómo resolver problemas reales de negocio."
 >
-  <div class="text-theme-muted mb-8 max-w-xl text-[15px] leading-7">
-    <p>
-      Comparto ideas, aprendizajes y reflexiones sobre tecnología, automatización, marketing digital y cómo usar la
-      tecnología para resolver problemas reales de negocio.
-    </p>
-  </div>
   {
     sortedPosts.length > 0 ? (
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
